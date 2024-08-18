@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #2c475c;
+  --color-text: #f4f9fc;
+  --color-title: #f4f9fc;
+  --color-decoration: #997a66;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+@layer base {
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: var(--color-background);
+  }
+
+  /* OWN classes */
+
+  .app {
+    @apply flex flex-col items-center justify-center gap-y-2 bg-mainColor;
+  }
+  /* Menu nav */
+
+  .active {
+    @apply text-decorator font-medium;
+  }
+}
