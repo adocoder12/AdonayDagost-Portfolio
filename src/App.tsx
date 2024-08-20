@@ -26,11 +26,7 @@ function App() {
         <MainContainer>
           <ScrollToTop />
           <Routes>
-            <Route
-              index
-              path="/{app-name}"
-              element={<HomePage services={services} />}
-            />
+            <Route index path="/" element={<HomePage services={services} />} />
             <Route path="/my-journey" element={<MyJourneyPage />} />
             <Route
               path="/projects/"
