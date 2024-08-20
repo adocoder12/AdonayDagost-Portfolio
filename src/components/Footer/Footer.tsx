@@ -12,19 +12,19 @@ export default function Footer() {
   const socialLinks = [
     {
       name: "GitHub",
-      link: "https://github.com",
+      link: "https://github.com/adocoder12",
       mediaColor: "#333",
       icon: <FaGithub size={30} />,
     },
     {
       name: "LinkedIn",
-      link: "https://linkedin.com",
+      link: "https://www.linkedin.com/in/adonay-dagosto/",
       mediaColor: "#0077B5",
       icon: <FaLinkedin size={30} />,
     },
     {
       name: "Email",
-      link: "mailto:your.email@example.com",
+      link: "mailto:adonay.jadal@gmail.com",
       icon: <IoMail size={30} />,
     },
   ];
