@@ -31,7 +31,7 @@
   /* Menu nav */
 
   .active {
-    @apply text-decorator font-medium;
+    @apply text-slate-800 font-medium;
   }
 
   /* loader */

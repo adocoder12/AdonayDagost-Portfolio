@@ -23,7 +23,7 @@ export default function NavItem({
       >
         {name}
         <span
-          className={`absolute -bottom-1 left-0 w-0 h-[3px] bg-decorator transition-all group-hover:w-full `}
+          className={`absolute -bottom-2 left-0 w-0 h-[3px] text-clip bg-decorator transition-all group-hover:w-full group-visited:w-full} `}
         ></span>
       </NavLink>
     </>

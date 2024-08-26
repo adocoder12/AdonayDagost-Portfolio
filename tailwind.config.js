@@ -27,7 +27,7 @@ export default {
       },
       colors: {
         transparent: "transparent",
-        mainColor: "#2c475c",
+        mainColor: "#3c6381",
         title: "#f4f9fc",
         content: "#f4f9fc",
         decorator: "#997a66",
