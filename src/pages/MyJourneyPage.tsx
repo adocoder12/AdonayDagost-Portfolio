@@ -5,11 +5,14 @@ import SkillsComponentList from "@/components/SkillsComponent/SkillsComponentLis
 export default function MyJourneyPage() {
   return (
     <>
-      <PagesHeader description="Hi, I’m Adonay D´agosto: Junior Software developer , amateur cook & Skater, guitarist, tinkerer, and general curious person_" />
+      <PagesHeader
+        secondaryTitle="Hi, I’m Adonay D´agosto"
+        description="Junior Software developer , amateur cook & Skater, guitarist, tinkerer, and general curious person_"
+      />
       <Banner title=" My Experience with the MERN Stack" />
       <div className=" w-fit grid place-content-center p-10 text-content text-2xl">
-        <div className="flex flex-col p-4">
-          <p className="text-lg  md:text-xl text-wrap mt-2  mb-8 w-full">
+        <div className="flex flex-col p-4 space-y-3">
+          <p className="text-lg  md:text-xl text-wrap mt-2   w-full">
             My journey into frontend development was fueled by a deep passion
             for creativity and problem-solving. From the moment I built my first
             simple webpage, I was captivated by the ability to bring ideas to
@@ -17,7 +20,7 @@ export default function MyJourneyPage() {
             frontend development allows me to express creativity while tackling
             complex challenges, which is something that has always driven me.
           </p>
-          <p className="text-xl  md:text-2xl text-wrap  mt-4">
+          <p className="text-lg  md:text-xl text-wrap  ">
             As I delved deeper into the world of web development, I became
             particularly fascinated by how frontend technologies like HTML, CSS,
             and JavaScript can be combined to create interactive, user-friendly
@@ -25,7 +28,7 @@ export default function MyJourneyPage() {
             frameworks, such as React and TypeScript, which opened up new
             possibilities for building dynamic and scalable web applications.
           </p>
-          <p className="text-xl  md:text-2xl text-wrap  mt-4">
+          <p className="text-lg  md:text-xl text-wrap  ">
             My motivation grew stronger as I realized the impact that a
             well-crafted user interface can have on the overall user experience.
             I love the challenge of creating responsive designs that look and

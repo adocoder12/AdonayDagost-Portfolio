@@ -26,7 +26,7 @@ export default function GallerySection({
               className={`animate-fade-up animate-once animate-duration-[2000ms] animate-ease-in-out h-[50vh]
                 ${
                   isOdd && idx === services.length - 1
-                    ? "lg:col-span-2  lg:h-[80vh]"
+                    ? "lg:col-span-2  lg:h-[60vh] lg:w-[70%] lg:mx-auto"
                     : ""
                 }`}
             />

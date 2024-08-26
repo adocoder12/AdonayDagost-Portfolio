@@ -61,7 +61,7 @@ export default function SkillsComponentList() {
                   return (
                     <Icon
                       key={item.name}
-                      className={item.color}
+                      className={` ${item.color}  hover:scale-125  cursor-pointer`}
                       title={item.name}
                       size={40}
                     />
