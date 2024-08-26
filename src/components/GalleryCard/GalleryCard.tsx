@@ -40,9 +40,6 @@ export default function GalleryCard({
           <h2 className="tracking-widest text-sm font-medium text-cyan-600 mb-1">
             {service.subtitle}
           </h2>
-          <p className="leading-relaxed text-sm text-content">
-            {service.description}
-          </p>
         </div>
       </div>
     </div>
