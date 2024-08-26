@@ -23,7 +23,7 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <Header />
-        <MainContainer>
+        <MainContainer className="animate-fade animate-once animate-duration-[5000ms] animate-delay-300  aniamtion-de animate-ease-in-out animate-normal ">
           <ScrollToTop />
           <Routes>
             <Route index path="/" element={<HomePage services={services} />} />

@@ -33,4 +33,6 @@
   .active {
     @apply text-decorator font-medium;
   }
+
+  /* loader */
 }

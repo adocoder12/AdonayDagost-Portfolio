@@ -5,8 +5,8 @@ import GallerySection from "@/components/GallerySection/GallerySection";
 import { TServices } from "@/utils/types/types";
 
 const btnLinks = [
-  { text: "Resume", href: "Resume" },
-  { text: "My Projects", href: "products" },
+  // { text: "Resume", href: "Resume" },
+  { text: "My Projects", href: "projects" },
 ];
 
 export default function HomePage({ services }: { services: TServices[] }) {

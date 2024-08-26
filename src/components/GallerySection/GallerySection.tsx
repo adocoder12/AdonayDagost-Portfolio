@@ -23,10 +23,10 @@ export default function GallerySection({
               service={service}
               key={idx}
               animationDelay={getAnimationDelay(idx)}
-              className={`animate-fade-up animate-once animate-duration-[2000ms] animate-ease-in-out 
+              className={`animate-fade-up animate-once animate-duration-[2000ms] animate-ease-in-out h-[50vh]
                 ${
                   isOdd && idx === services.length - 1
-                    ? "lg:col-span-2 h-[60vh]"
+                    ? "lg:col-span-2  lg:h-[80vh]"
                     : ""
                 }`}
             />
