@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 type NavItemProps = {
   name: string;
   link: string;
-  setToggleMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  setToggleMenu: (toggle: boolean) => void;
   isActive?: boolean;
 };
 
@@ -23,7 +23,7 @@ export default function NavItem({
       >
         {name}
         <span
-          className={`absolute -bottom-2 left-0 w-0 h-[3px] text-clip bg-decorator transition-all group-hover:w-full group-visited:w-full} `}
+          className={`absolute -bottom-2 left-0 w-0 h-[3px] text-clip bg-decorator transition-all lg:group-hover:w-full } `}
         ></span>
       </NavLink>
     </>
