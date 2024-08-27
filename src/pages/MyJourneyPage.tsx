@@ -10,7 +10,7 @@ export default function MyJourneyPage() {
         description="Junior Software developer , amateur cook & Skater, guitarist, tinkerer, and general curious person_"
       />
       <Banner title=" My Experience with the MERN Stack" />
-      <div className=" w-fit grid place-content-center p-10 text-content text-2xl">
+      <div className=" w-fit grid place-content-center py-2 md:py-3 text-content text-2xl">
         <div className="flex flex-col p-4 space-y-3">
           <p className="text-lg  md:text-xl text-wrap mt-2   w-full">
             My journey into frontend development was fueled by a deep passion
