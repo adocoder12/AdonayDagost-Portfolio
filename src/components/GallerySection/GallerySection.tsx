@@ -17,13 +17,13 @@ export default function GallerySection({
   return (
     <section className="w-full">
       <div className="container px-5 pt-24 mx-auto">
-        <div className="flex flex-wrap -m-4 lg:grid lg:grid-cols-2 gap-4">
+        <div className="flex flex-wrap -m-4 lg:grid lg:grid-cols-2 gap-4 ">
           {services.map((service, idx) => (
             <GalleryCard
               service={service}
               key={idx}
               animationDelay={getAnimationDelay(idx)}
-              className={`animate-fade-up animate-once animate-duration-[2000ms] animate-ease-in-out h-[50vh]
+              className={`animate-fade-up animate-once animate-duration-[2000ms] animate-ease-in-out h-[50vh] 
                 ${
                   isOdd && idx === services.length - 1
                     ? "lg:col-span-2  lg:h-[60vh] lg:w-[70%] lg:mx-auto"
