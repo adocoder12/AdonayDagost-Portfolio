@@ -4,7 +4,7 @@ import { Suspense, lazy } from "react";
 // Components
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-// import Loader from "./components/Loader/Loader";
+import Loader from "./components/Loader/Loader";
 
 //ui componnents
 import MainContainer from "./components/UI/MainContainer/MainContainer";
@@ -28,7 +28,7 @@ function App() {
         <Header />
         <MainContainer className="">
           <ScrollToTop />
-          <Suspense fallback={<h2></h2>}>
+          <Suspense fallback={<Loader />}>
             <Routes>
               <Route
                 index
