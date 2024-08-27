@@ -1,5 +1,4 @@
 // herot types
-
 export type Link = {
   href?: string;
   text?: string;
@@ -15,11 +14,16 @@ export type THero = {
 
 // product types
 
+export type Thumbnail = {
+  src: string;
+  alt: string;
+};
+
 export type TServices = {
   id?: number;
   title?: string;
   subtitle?: string;
   description: string;
-  thumbnail: { src: string; alt: string };
-  thumbnails: { id: number; src: string; alt: string }[];
+  thumbnail: Thumbnail;
+  thumbnails: Thumbnail[];
 };
