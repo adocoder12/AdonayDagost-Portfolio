@@ -34,7 +34,7 @@ export default function GalleryCard({
           src={service.thumbnail.src}
         />
         <div className="relative flex flex-col  justify-center items-center  w-full h-full  lg:gap-y-3 px-8 py-10 rounded-lg  z-10 outline outline-offset-1 outline-2 outline-content bg-decorator opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out">
-          <div className="outline  outline-offset-[24px] md:outline-offset-[60px] outline-content mx-auto text-center">
+          <div className="outline  outline-offset-[20px] md:outline-offset-[60px] outline-content mx-auto text-center">
             <h1 className="text-lg md:text-xl uppercase font-medium  text-content mb-3">
               {service.title}
             </h1>
