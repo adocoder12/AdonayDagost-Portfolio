@@ -16,7 +16,7 @@ export default function SingleProduct({
   }, [selectedThumbnail, thumbnails]);
 
   return (
-    <section className="grid mx-auto p-10 w-full   text-content">
+    <section className="grid mx-auto p-2 md:p-4 w-full   text-content">
       {/* Photo Section */}
       <div className="flex p-3 flex-col lg:flex-row lg:flex-1 gap-4 bg-content/5 rounded-lg shadow-md order-2">
         <div className="flex-2 flex justify-center items-center p-0 md:p-2 lg:p-4 rounded-lg overflow-hidden">
@@ -34,7 +34,7 @@ export default function SingleProduct({
               key={index}
             >
               <img
-                className={`w-[100px] max-w-full  max-h-48 object-cover  rounded-md hover:scale-105  md:w-[160px] lg:w-full  transition-transform duration-200 ease-in-out cursor-pointer  ${
+                className={`w-[120px] max-w-full  max-h-48 object-cover  rounded-md hover:scale-105  md:w-[160px] lg:w-full  transition-transform duration-200 ease-in-out cursor-pointer  ${
                   mainThumbnail.src === thumbnail.src
                     ? "outline outline-[3px] outline-decorator "
                     : "outline outline-[3px] outline-black"
