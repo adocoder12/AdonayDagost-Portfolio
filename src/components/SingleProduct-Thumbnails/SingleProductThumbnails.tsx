@@ -20,7 +20,7 @@ export default function SingleProductThumbnails({
             key={index}
           >
             <img
-              className={`w-[120px] max-w-full  max-h-48 object-cover  rounded-md hover:scale-105  md:w-[160px] lg:w-full  transition-transform duration-200 ease-in-out cursor-pointer  ${
+              className={`w-[120px]  max-h-48 object-cover  rounded-md hover:scale-105  md:w-[160px] transition-transform duration-200 ease-in-out cursor-pointer  ${
                 mainThumbnail.src === thumbnail.src
                   ? "outline outline-[3px] outline-decorator "
                   : "outline outline-[3px] outline-black"
