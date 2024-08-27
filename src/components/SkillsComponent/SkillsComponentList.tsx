@@ -19,7 +19,6 @@ const skills = [
       { name: "CSS", icon: FaCss3Alt, color: "text-blue-500" },
       { name: "Python", icon: FaPython, color: "text-yellow-500" },
       { name: "JavaScript", icon: FaJs, color: "text-yellow-400" },
-      { name: "ReactJS", icon: FaReact, color: "text-cyan-400" },
     ],
   },
   {
@@ -61,7 +60,7 @@ export default function SkillsComponentList() {
                   return (
                     <Icon
                       key={item.name}
-                      className={` ${item.color}  hover:scale-125  cursor-pointer`}
+                      className={` ${item.color}  hover:scale-125 `}
                       title={item.name}
                       size={40}
                     />

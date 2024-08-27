@@ -1,6 +1,5 @@
 import { TServices } from "@/utils/types/types";
 import { useState, useMemo } from "react";
-import { Suspense } from "react";
 
 export default function SingleProduct({
   subtitle,
@@ -17,27 +16,25 @@ export default function SingleProduct({
   }, [selectedThumbnail, thumbnails]);
 
   return (
-    <section className="grid gap-2 mx-auto p-10 w-full   text-content">
+    <section className="grid mx-auto p-10 w-full   text-content">
       {/* Photo Section */}
-      <div className="flex p-6 flex-col lg:flex-row lg:flex-1 gap-4 bg-content/5 rounded-lg shadow-md order-2">
-        <Suspense fallback={<h1>Loading...</h1>}>
-          <div className="flex-2 flex justify-center items-center p-4 rounded-lg overflow-hidden">
-            <img
-              src={mainThumbnail.src}
-              alt={mainThumbnail.alt}
-              className="w-full h-auto max-h-[80vh] object-cover saturate-150 contrast-120 hue-rotate-10"
-            />
-          </div>
-        </Suspense>
+      <div className="flex p-3 flex-col lg:flex-row lg:flex-1 gap-4 bg-content/5 rounded-lg shadow-md order-2">
+        <div className="flex-2 flex justify-center items-center p-0 md:p-2 lg:p-4 rounded-lg overflow-hidden">
+          <img
+            src={mainThumbnail.src}
+            alt={mainThumbnail.alt}
+            className="w-full h-auto max-h-[80vh] object-cover saturate-150 contrast-120 hue-rotate-10"
+          />
+        </div>
 
-        <div className="grid grid-col-2 mx-auto  md:grid-cols-4 max-w-fit lg:flex lg:flex-col lg:flex-nowrap  items-center gap-4 p-4 rounded-sm  overflow-auto lg:max-h-[80vh] lg:w-1/4">
+        <div className="grid grid-cols-2   items-center gap-4 p-4 rounded-sm  md:mx-auto  md:grid-cols-4 md:max-w-fit lg:flex lg:flex-col lg:flex-nowrap  lg:max-h-[80vh] lg:w-1/4  overflow-auto">
           {thumbnails!.map((thumbnail, index) => (
             <div
               className="flex justify-start lg:justify-center snap-start p-2"
               key={index}
             >
               <img
-                className={`w-[130px] lg:w-full max-h-48 object-cover  rounded-md hover:scale-105 p-1 transition-transform duration-200 ease-in-out cursor-pointer ${
+                className={`w-[100px] max-w-full  max-h-48 object-cover  rounded-md hover:scale-105  md:w-[160px] lg:w-full  transition-transform duration-200 ease-in-out cursor-pointer  ${
                   mainThumbnail.src === thumbnail.src
                     ? "outline outline-[3px] outline-decorator "
                     : "outline outline-[3px] outline-black"
