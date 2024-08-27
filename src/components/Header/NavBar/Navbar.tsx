@@ -27,7 +27,7 @@ export default function Navbar({
           className
         )}
       >
-        <ul className="flex  flex-col  lg:flex-row md:gap-8 gap-y-4 my-3 mt-6 list-none uppercase bg-inherit">
+        <ul className="flex  flex-col  lg:flex-row md:gap-8 gap-y-4   list-none uppercase bg-inherit">
           {children}
         </ul>
       </nav>

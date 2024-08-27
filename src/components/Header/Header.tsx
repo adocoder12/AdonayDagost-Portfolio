@@ -30,9 +30,9 @@ export default function Header() {
 
   return (
     <header className="flex items-center px-4 py-6  w-[calc(100%-24px)] mx-auto bg-mainColor top-0 fixed z-20  ">
-      <div className="flex items-center justify-between lg:justify-around w-full mx-auto w-82  ">
+      <div className="flex items-center justify-between lg:justify-around w-full mx-auto w-82 text-title ">
         <div className="flex items-center">
-          <Link to="/" className="text-2xl font-bold uppercase text-title  ">
+          <Link to="/" className="text-2xl font-bold uppercase   ">
             Adonay D'Agosto
           </Link>
         </div>
