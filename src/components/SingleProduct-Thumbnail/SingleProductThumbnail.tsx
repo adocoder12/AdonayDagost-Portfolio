@@ -13,7 +13,7 @@ export default function SingleProductThumbnail({
         <img
           src={thumbnail.src}
           alt={thumbnail.alt}
-          className="w-full   aspect-square h-auto max-h-[80vh] rounded-lg object-cover saturate-150 contrast-120 hue-rotate-10"
+          className="w-full  md-w[80%]  h-auto max-h-[80vh] rounded-lg object-cover saturate-150 contrast-120 hue-rotate-10"
         />
       </div>
     </>
