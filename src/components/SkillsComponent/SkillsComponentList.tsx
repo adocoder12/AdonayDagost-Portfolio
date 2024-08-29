@@ -8,8 +8,8 @@ import {
   FaGitAlt,
   FaWordpress,
 } from "react-icons/fa";
-import { SiVitess } from "react-icons/si";
-import { DiMongodb, DiDjango } from "react-icons/di";
+import { SiVitess, SiDjango } from "react-icons/si";
+import { DiMongodb } from "react-icons/di";
 
 const skills = [
   {
@@ -33,7 +33,7 @@ const skills = [
     title: "Libraries & Frameworks",
     items: [
       { name: "ReactJS", icon: FaReact, color: "text-cyan-500" },
-      { name: "Django", icon: DiDjango, color: "text-green-500" },
+      { name: "Django", icon: SiDjango, color: "text-green-500" },
       { name: "ViteJS", icon: SiVitess, color: "text-blue-500" },
       { name: "Mongoose", icon: DiMongodb, color: "text-green-600" },
     ],
