@@ -32,10 +32,10 @@ const skills = [
   {
     title: "Libraries & Frameworks",
     items: [
-      { name: "ReactJS", icon: FaReact, color: "text-cyan-500" },
+      { name: "React", icon: FaReact, color: "text-cyan-500" },
       { name: "Django", icon: SiDjango, color: "text-green-500" },
       { name: "ViteJS", icon: SiVitess, color: "text-blue-500" },
-      { name: "Mongoose", icon: DiMongodb, color: "text-green-600" },
+      { name: "Mongodb", icon: DiMongodb, color: "text-green-600" },
     ],
   },
 ];
@@ -47,10 +47,10 @@ export default function SkillsComponentList() {
         <div className=" grid grid-cols-1 gap-y-4 md:gap-x-4 md:grid-cols-3   ">
           {skills.map((skill) => (
             <div
-              className="bg-gray-100 p-4 rounded-lg shadow-md  "
+              className="bg-gray-100 p-4 rounded-lg shadow-md "
               key={skill.title}
             >
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-4">
                 <h4 className="text-lg font-semibold text-center text-slate-600">
                   {skill.title}
                 </h4>
@@ -59,12 +59,17 @@ export default function SkillsComponentList() {
                 {skill.items.map((item) => {
                   const Icon = item.icon;
                   return (
-                    <Icon
-                      key={item.name}
-                      className={` ${item.color}  hover:scale-125 `}
-                      title={item.name}
-                      size={40}
-                    />
+                    <div className="grid grid-cols-1 place-items-center gap-y-2 hover:scale-125 ">
+                      <Icon
+                        key={item.name}
+                        className={` ${item.color}  `}
+                        title={item.name}
+                        size={40}
+                      />
+                      <h3 className="text-lg font-semibold text-center text-slate-600 ">
+                        {item.name}
+                      </h3>
+                    </div>
                   );
                 })}
               </p>
