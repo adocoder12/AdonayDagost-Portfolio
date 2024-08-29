@@ -4,9 +4,9 @@ import { IoMail } from "react-icons/io5";
 
 export default function Footer() {
   const navLinks = [
-    { name: "Products", link: "/products" },
-    { name: "About Us", link: "/about" },
-    { name: "Contact", link: "/contact" },
+    { name: "Home", link: "/" },
+    { name: "My journey", link: "/my-journey" },
+    { name: "Projects", link: "/projects" },
   ];
 
   const socialLinks = [
