@@ -48,7 +48,7 @@ export default function Footer() {
             <li key={link}>
               <Link
                 rel="noopener noreferrer"
-                className="relative font-normal text-md transition-colors  group "
+                className="relative font-normal text-md transition-colors uppercase  group "
                 to={link}
                 aria-label={name}
               >
