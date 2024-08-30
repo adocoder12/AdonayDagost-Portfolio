@@ -10,22 +10,24 @@ export default function Hero({ links, className }: THero) {
   return (
     <section
       className={cn(
-        "w-full flex justify-around items-center pt-18 py-28 lg:py-48 px-2  text-content",
+        "w-full grid grid-cols-1  md:grid-cols-2 gap-x-2 justify-center items-center py-18 p-2  text-content",
         className
       )}
     >
       {/* Text Section */}
-      <div className="flex flex-col ">
-        <h4 className="text-2xl">Hi ✋🏾 I’m Ado,</h4>
-        <h2 className="title text-6xl font-bold my-2 max-w-[320px] leading-tight">
-          Jr Frontend Developer
+      <div className="flex flex-col md:ml-28 ">
+        <h4 className="text-md leading-tight text-start">
+          Hi ✋🏾H, here is Ado behind the keyboard._
+        </h4>
+        <h2 className="title text-6xl font-bold my-2  w-full max-w-[440px] leading-tight">
+          Junior Frontend Developer.
         </h2>
-        <h4 className="font-bold mb-6 ">Based in Finland.</h4>
+        {/* <h4 className="font-bold mb-6 ">Based in Finland.</h4> */}
         <div className="flex space-x-2">
           {links &&
             links.length > 0 &&
             links.map((link, idx) => (
-              <Button key={idx} btnHerf={link.href}>
+              <Button key={idx} btnHerf={link.href} className="">
                 {link.text}
               </Button>
             ))}
@@ -33,18 +35,16 @@ export default function Hero({ links, className }: THero) {
       </div>
 
       {/* Image Section */}
-      <div className="relative hidden md:inline-flex  w-[260px] h-[260px]  ">
+      <div className="relative hidden md:flex md:justify-center  md:items-center  w-full h-screen  p-4">
         {/* slash */}
-        <div className="absolute bottom-10 font-medium text-decorator">
-          /////
-        </div>
-        {/* Circular Border */}
-        <div className="absolute w-[260px] h-[260px] border border-solid rounded-full -left-2 top-2"></div>
+        <h2 className="absolute bottom-[7.5rem] left-28 font-bold text-8xl text-title ">
+          A.D
+        </h2>
         {/* Profile Image */}
         <img
           src={profilePic}
           alt="selfPic"
-          className="w-full h-full object-cover object-center rounded-full  shadow-lg bg-center "
+          className="w-sm h-2/3   object-cover object-center rounded-md  shadow-lg bg-center "
         />
       </div>
     </section>

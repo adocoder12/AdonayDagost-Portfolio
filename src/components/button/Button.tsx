@@ -2,6 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/utils/cn";
 
+//icons
+import { MdArrowOutward } from "react-icons/md";
+
 type ButtonProps = {
   children: React.ReactNode;
   btnHerf?: string;
@@ -26,20 +29,26 @@ export default function Button({
     }
   };
   return (
-    <div className={cn("inline-flex relative mr-2 group w-full", className)}>
+    <div
+      className={cn(
+        "inline-flex items-center relative mr-2 group w-full",
+        className
+      )}
+    >
       {/* Button Background */}
-      <div className="absolute w-full h-full bg-decorator top-1 left-1 rounded-sm z-[0] group-hover:scale-[1.02]" />
+      {/* <div className="absolute w-full h-full bg-decorator top-1 left-1 rounded-md z-[0] group-hover:scale-[1.02]" /> */}
 
       {/* Button */}
       <button
         type={type}
         {...attributes}
         className={cn(
-          "p-[15px]  w-full rounded-sm text-sm font-bold border z-10  border-white  text-black bg-transparent shadow-lg capitalize active:scale-95 hover:cursor-pointer hover:opacity-[0.8]"
+          " flex items-center space-x-2 p-[15px] w-full  underline underline-offset-2 rounded-md text-sm font-bold z-10 text-title bg-transparent capitalize active:scale-95 group-hover:scale-[1.02] hover:cursor-pointer  "
         )}
         onClick={handleClick}
       >
-        {children}
+        <span>{children}</span>
+        <MdArrowOutward size={12} />
       </button>
     </div>
   );
