@@ -4,6 +4,9 @@ export default {
 
   theme: {
     extend: {
+      fontFamily: {
+        Courier: ["Courier Prime", "monospace", "sans-serif"],
+      },
       keyframes: {
         jump7456: {
           "15%": { "border-bottom-right-radius": "3px" },

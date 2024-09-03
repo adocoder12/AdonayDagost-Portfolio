@@ -22,7 +22,7 @@ export default function PagesHeader({
     <>
       <section
         className={cn(
-          " flex flex-col justify-center items-start  md:items-center   text-content",
+          " flex flex-col justify-center items-start  md:items-center min-h-[50vh]  text-content",
           className
         )}
       >

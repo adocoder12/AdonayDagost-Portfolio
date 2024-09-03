@@ -11,6 +11,9 @@ import {
 import { SiVitess, SiDjango } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 
+//components
+import SkillsItem from "../SkillsItem/SkillsItem";
+
 const skills = [
   {
     title: "Programming Languages",
@@ -39,43 +42,27 @@ const skills = [
     ],
   },
 ];
+
 export default function SkillsComponentList() {
   return (
     <>
-      <div className="p-6 ">
-        <h2 className="text-2xl font-bold mb-4">Skills_</h2>
-        <div className=" grid grid-cols-1 gap-y-4 md:gap-x-4 md:grid-cols-3   ">
-          {skills.map((skill) => (
-            <div
-              className="bg-gray-100 p-4 rounded-lg shadow-md "
-              key={skill.title}
-            >
-              <div className="flex items-center mb-4">
-                <h4 className="text-lg font-semibold text-center text-slate-600">
-                  {skill.title}
-                </h4>
-              </div>
-              <p className="flex flex-wrap items-center justify-around text-gray-700 ">
-                {skill.items.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <div className="grid grid-cols-1 place-items-center gap-y-2 hover:scale-125 ">
-                      <Icon
-                        key={item.name}
-                        className={` ${item.color}  `}
-                        title={item.name}
-                        size={40}
-                      />
-                      <h3 className="text-lg font-semibold text-center text-slate-600 ">
-                        {item.name}
-                      </h3>
-                    </div>
-                  );
-                })}
-              </p>
+      <div className=" grid grid-cols-1 justify-around items-center gap-y-4 lg:gap-x-4 lg:grid-cols-3 text-content">
+        {skills.map((skill) => (
+          // title and icon wrapper
+          <div className=" p-4 rounded-sm " key={skill.title}>
+            <h4 className="text-lg font-semibold text-center  mb-8">
+              {skill.title}
+            </h4>
+
+            {/* // skill items */}
+            <div className=" grid grid-cols-2 grid-flow-row-dense justify-around items-start  md:items-center   md:gap-x-2 md:gap-y-8 ">
+              {skill.items.map((item) => {
+                // const Icon = item.icon;
+                return <SkillsItem item={item} />;
+              })}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </>
   );
