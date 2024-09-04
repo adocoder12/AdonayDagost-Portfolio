@@ -11,6 +11,14 @@ import {
 import { SiVitess, SiDjango } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 
+//utils
+// import { IconType } from "react-icons";
+import { cn } from "@utils/cn";
+
+type TskillsList = {
+  className?: string;
+};
+
 //components
 import SkillsItem from "../SkillsItem/SkillsItem";
 
@@ -43,21 +51,26 @@ const skills = [
   },
 ];
 
-export default function SkillsComponentList() {
+export default function SkillsComponentList({ className }: TskillsList) {
   return (
     <>
-      <div className=" grid grid-cols-1 justify-around items-center gap-y-4 lg:gap-x-4 lg:grid-cols-3 text-content">
+      <div
+        className={cn(
+          "grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ",
+          className
+        )}
+      >
         {skills.map((skill) => (
           // title and icon wrapper
-          <div className=" p-4 rounded-sm " key={skill.title}>
-            <h4 className="text-lg font-semibold text-center  mb-8">
-              {skill.title}
-            </h4>
+          <div
+            className=" flex flex-col items-center justify-center gap-y-8 p-4 lg:gap-x-4  text-content  md:last:col-span-full  lg:last:col-auto"
+            key={skill.title}
+          >
+            <h4 className="text-lg font-semibold ">{skill.title}</h4>
 
             {/* // skill items */}
-            <div className=" grid grid-cols-2 grid-flow-row-dense justify-around items-start  md:items-center   md:gap-x-2 md:gap-y-8 ">
+            <div className=" grid grid-cols-2 w-40 grid-flow-row-dense   gap-y-8 items-center   md:gap-x-2 md:gap-y-8 ">
               {skill.items.map((item) => {
-                // const Icon = item.icon;
                 return <SkillsItem item={item} />;
               })}
             </div>

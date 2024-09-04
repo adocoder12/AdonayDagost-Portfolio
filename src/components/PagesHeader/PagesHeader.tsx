@@ -22,18 +22,18 @@ export default function PagesHeader({
     <>
       <section
         className={cn(
-          " flex flex-col justify-center items-start  md:items-center min-h-[50vh]  text-content",
+          " flex flex-col justify-center items-start  md:items-center  min-h-[40vh]  text-content",
           className
         )}
       >
         <div className="flex flex-col gap-y-6 justify-center py-12">
-          <h2 className=" text-4xl md:text-6xl font-bold my-2  leading-tight uppercase">
+          <h2 className=" text-3xl md:text-6xl font-bold my-2  leading-tight uppercase">
             {title ? title + "_" : page + "_"}
           </h2>
           <h3 className="text-xl md:text-4xl font-bold my-2 leading-tight uppercase">
             {secondaryTitle}
           </h3>
-          <p className="text-content text-lg font-normal max-w-3xl text-wrap ">
+          <p className="text-content text-md md:text-xl font-ligth max-w-3xl text-wrap ">
             {description}
           </p>
         </div>

@@ -34,11 +34,10 @@ export default function HomePage({ services }: { services: TServices[] }) {
       </section>
 
       {/* SKils section */}
-      <section className=" grid grid-cols-1  py-3 md:py-5 space-y-8 text-content text-2xl leading-tight max-w-6xl mb-8">
-        <h2 className="text-xl   md:text-4xl font-semibold leading-tight">
+      <section className=" grid grid-cols-1   py-3 md:py-5 space-y-8 text-content text-2xl leading-tight max-w-6xl mb-8">
+        <h2 className="text-xl  md:text-4xl font-semibold leading-tight">
           Skills I've honed to excel as a frontend developer.
         </h2>
-        <h3 className="text-2xl font-bold ">Skills_</h3>
 
         <SkillsComponentList />
       </section>
