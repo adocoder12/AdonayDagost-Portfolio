@@ -4,9 +4,10 @@ import { useState, useMemo, Suspense, lazy } from "react";
 import { TServices, Thumbnail } from "@/utils/types/types";
 //components
 import Loader from "../Loader/Loader";
-import SingleProductThumbnail from "../SingleProduct-Thumbnail/SingleProductThumbnail";
-const SingleProductThumbnails = lazy(
-  () => import("../SingleProduct-Thumbnails/SingleProductThumbnails")
+import SingleProductThumbnails from "../SingleProduct-Thumbnails/SingleProductThumbnails";
+
+const SingleProductThumbnail = lazy(
+  () => import("../SingleProduct-Thumbnail/SingleProductThumbnail")
 );
 
 export default function SingleProduct({
