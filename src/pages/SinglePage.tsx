@@ -15,8 +15,6 @@ export default function SinglePage() {
     (service: TServices) => service.id === Number(id)
   );
 
-  console.log(service);
-
   return (
     <>
       <PagesHeader title={service?.title || ""} />

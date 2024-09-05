@@ -1,8 +1,24 @@
+import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+//utils
+import { capitalizeFirstLetter } from "@/utils/functions";
+
+//components
 import PagesHeader from "@/components/PagesHeader/PagesHeader";
 
 export default function MyJourneyPage() {
+  const location = useLocation();
+
+  const currentPage =
+    location.pathname === "/"
+      ? "HomePage"
+      : capitalizeFirstLetter(location.pathname.replace("/", ""));
   return (
     <>
+      <Helmet>
+        <title>Adonay D'agosto || {currentPage}</title>
+        <meta name="description" content="Portfolio about-me" />
+      </Helmet>
       <PagesHeader
         secondaryTitle="Hi, I’m Adonay D'agosto"
         description="A Frontend developer , I love to cook , Skate, play guitar and code."

@@ -1,3 +1,7 @@
+import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
+//component
 import Hero from "@/components/Hero/Hero";
 import GallerySection from "@/components/GallerySection/GallerySection";
 import SkillsComponentList from "@/components/SkillsComponent/SkillsComponentList";
@@ -6,14 +10,28 @@ import SkillsComponentList from "@/components/SkillsComponent/SkillsComponentLis
 import { TServices } from "@/utils/types/types";
 import Button from "@/components/button/Button";
 
+//utils
+import { capitalizeFirstLetter } from "@/utils/functions";
+
 const btnLinks = [
   // { text: "Resume", href: "Resume" },
   { text: "Know more About me", href: "projects" },
 ];
 
 export default function HomePage({ services }: { services: TServices[] }) {
+  const location = useLocation();
+
+  const currentPage =
+    location.pathname === "/"
+      ? "HomePage"
+      : capitalizeFirstLetter(location.pathname.replace("/", ""));
+
   return (
     <>
+      <Helmet>
+        <title>Adonay D'agosto || {currentPage}</title>
+        <meta name="description" content="Portfolio projects" />
+      </Helmet>
       <Hero
         links={btnLinks}
         className="animate-fade animate-once animate-duration-[2000ms] animate-delay-[10ms] animate-ease-in-out"
