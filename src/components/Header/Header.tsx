@@ -17,8 +17,8 @@ const navLinks = [
     link: "/projects",
   },
   {
-    name: "My Journey",
-    link: "/my-journey",
+    name: "About Me",
+    link: "/about-me",
   },
 ];
 export default function Header() {

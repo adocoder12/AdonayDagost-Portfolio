@@ -10,7 +10,7 @@ export default function Footer() {
   const navLinks = [
     { name: "Home", link: "/" },
     { name: "Projects", link: "/projects" },
-    { name: "My journey", link: "/my-journey" },
+    { name: "About me", link: "/about-me" },
   ];
 
   const socialLinks = [

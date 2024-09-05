@@ -52,7 +52,7 @@ export default function AnimatedRoutes({
           }
         />
         <Route
-          path="/my-journey"
+          path="/about-me"
           element={
             <motion.div
               variants={pageTransitionVariants}
