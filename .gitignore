@@ -17,7 +17,7 @@ assets/
 .env
 
 
-.htaccess
+# .htaccess
 
 # Editor directories and files
 .vscode/*
