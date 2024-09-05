@@ -41,16 +41,10 @@ export default function Footer() {
           alt="logo-ct"
           className="rounded-md w-24 h-24 md:w-32 md:h-32"
         /> */}
-        <div className="grid gap-y-4">
-          <h3 className="text-xl md:text-2xl font-bold text-blue-gray-900 uppercase">
-            Adonay D'agosto
-          </h3>
-          <p className="max-w-[250px] leading-tight">
-            "I'm a passionate frontend developer, eager to grow professionally
-            in this field. I'm based in Helsinki, Finland, where I'm excited to
-            continue developing my career in programming."
-          </p>
-        </div>
+
+        <h3 className="text-xl md:text-2xl font-bold text-blue-gray-900 uppercase">
+          Adonay D'agosto
+        </h3>
 
         {/* Navigation Links */}
         <ul className="flex flex-col justify-start flex-wrap  gap-y-6">
@@ -81,9 +75,9 @@ export default function Footer() {
               rel="noopener noreferrer"
               className=" font-normal text-md transition-colors  uppercase "
               aria-label={"phone number"}
-              to="tel:+358449724870"
+              to="tel:+358400168892"
             >
-              {"+358449724870"}
+              {"+358400168892"}
             </Link>
           </li>
           <li className="flex items-center  gap-x-2 hover:scale-105 hover:text-black">
