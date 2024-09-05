@@ -19,7 +19,7 @@ export default function Hero({ links, className }: THero) {
         <h2 className="text-md font-normal leading-tight text-start">
           Hi ✋🏾, here is Ado.
         </h2>
-        <h1 className="text-5xl uppercase md:text-7xl  xl:text-8xl font-bold my-2  w-full leading-tight">
+        <h1 className="text-5xl uppercase md:text-7xl  xl:text-8xl font-bold my-2  w-full max-w-[420px] leading-tight">
           A Frontend Developer.
         </h1>
         {/* <h4 className="font-bold mb-6 ">Based in Finland.</h4> */}
