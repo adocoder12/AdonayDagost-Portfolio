@@ -25,28 +25,26 @@ export default function MyJourneyPage() {
       />
       <div className="grid grid-cols-1 w-full max-w-7xl gap-y-8 place-content-center py-3 md:py-5 text-content text-2xl">
         <p className="text-sm  md:text-md  font-light md:text-xl text-wrap  ">
-          My journey into frontend development was fueled by a deep passion for
-          creativity and problem-solving. From the moment I built my first
-          simple webpage, I was captivated by the ability to bring ideas to life
-          on the screen. The blend of design and functionality in frontend
-          development allows me to express creativity while tackling complex
-          challenges, which is something that has always driven me.
+          I’m a frontend developer with a deep passion for creativity and
+          problem-solving. From the moment I built my first webpage, I was
+          hooked by how design and functionality bring ideas to life. Using
+          HTML, CSS, JavaScript, React, Tailwind, and TypeScript, I focus on
+          creating interactive, user-friendly experiences.
         </p>
         <p className="text-sm   md:text-md  font-light md:text-xl text-wrap  ">
-          As I delved deeper into the world of web development, I became
-          particularly fascinated by how frontend technologies like HTML, CSS,
-          and JavaScript can be combined to create interactive, user-friendly
-          experiences. This led me to explore more advanced tools and
-          frameworks, such as React and TypeScript, which opened up new
-          possibilities for building dynamic and scalable web applications.
+          As I explored more, I dove into advanced tools like React, Tailwind,
+          and Django, unlocking new ways to build dynamic, scalable web apps. I
+          love the challenge of designing responsive interfaces that work
+          smoothly across devices, and seeing my projects come to life is the
+          most rewarding part of what I do
         </p>
         <p className="text-sm  md:text-md  font-light md:text-xl text-wrap  ">
-          My motivation grew stronger as I realized the impact that a
-          well-crafted user interface can have on the overall user experience. I
-          love the challenge of creating responsive designs that look and
-          perform well across all devices. The satisfaction of seeing a
-          beautifully designed, functional application in the hands of users is
-          incredibly rewarding.
+          When I’m not coding, I like to keep things fun and active. You’ll
+          often find me skating, where I enjoy the freedom of cruising around
+          and perfecting tricks. I also love playing guitar, letting creativity
+          flow through music. And when it’s time to unwind, there’s nothing
+          better than a game of football with friends to stay sharp and
+          energized.
         </p>
       </div>
     </>
