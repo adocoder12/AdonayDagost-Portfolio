@@ -19,7 +19,7 @@ export default function Banner({
   return (
     <>
       <div
-        className={`flex flex-col justify-center items-center gap-y-8 p-6 shadow-lg h-[55vh] md:h-[42vh] bg-cover bg-center w-full`}
+        className={`flex flex-col justify-center items-center gap-y-8 p-6 shadow-lg h-[30vh] md:h-[42vh] bg-cover bg-center w-full`}
         style={{ backgroundImage: `url(${CoverImg_banner || coverImg})` }}
       >
         <h1 className="text-lg lg:text-5xl absolute  text-title uppercase font-medium backdrop-brightness-50">
