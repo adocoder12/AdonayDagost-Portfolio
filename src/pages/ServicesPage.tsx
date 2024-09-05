@@ -1,16 +1,17 @@
 import { lazy, Suspense } from "react";
-
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-//utils
-import { capitalizeFirstLetter } from "@/utils/functions";
+
 //components
-import Loader from "@/components/Loader/Loader";
 const GallerySection = lazy(
   () => import("@/components/GallerySection/GallerySection")
 );
+import Loader from "@/components/Loader/Loader";
 import PagesHeader from "@/components/PagesHeader/PagesHeader";
 
+//utils
+import { capitalizeFirstLetter } from "@/utils/functions";
+//types
 import { TServices } from "@/utils/types/types";
 
 export default function ServicesPage({ services }: { services: TServices[] }) {
@@ -24,7 +25,7 @@ export default function ServicesPage({ services }: { services: TServices[] }) {
   return (
     <>
       <Helmet>
-        <title>Adonay D'agosto || {currentPage}</title>
+        <title>Adonay D'agosto | {currentPage}</title>
         <meta name="description" content="Portfolio projects" />
       </Helmet>
       <PagesHeader

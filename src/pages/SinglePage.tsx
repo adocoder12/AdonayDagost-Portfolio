@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 //components
 import PagesHeader from "@/components/PagesHeader/PagesHeader";
@@ -17,6 +18,13 @@ export default function SinglePage() {
 
   return (
     <>
+      <Helmet>
+        <title>Adonay D'agosto | {service?.title}</title>
+        <meta
+          name="description"
+          content={`Portfolio projects {service?.title} {service!.description}`}
+        />
+      </Helmet>
       <PagesHeader title={service?.title || ""} />
       <SingleProduct
         subtitle={service!.subtitle}

@@ -16,7 +16,7 @@ export default function MyJourneyPage() {
   return (
     <>
       <Helmet>
-        <title>Adonay D'agosto || {currentPage}</title>
+        <title>Adonay D'agosto | {currentPage}</title>
         <meta name="description" content="Portfolio about-me" />
       </Helmet>
       <PagesHeader
