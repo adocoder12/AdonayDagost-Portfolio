@@ -10,13 +10,15 @@ export default function SkillsItem({ item }: { item: TSkills }) {
   const Icon = item.icon;
   return (
     <>
-      <Icon
-        key={item.name}
-        className={` ${item.color}   `}
-        title={item.name}
-        size={40}
-      />
-      <h3 className="hidden text-lg font-semibold text-center ">{item.name}</h3>
+      <div className="flex flex-col items-center gap-y-3">
+        <Icon
+          key={item.name}
+          className={` ${item.color}   `}
+          title={item.name}
+          size={40}
+        />
+        <p className=" text-sm font-ligth text-center ">{item.name}</p>
+      </div>
     </>
   );
 }
