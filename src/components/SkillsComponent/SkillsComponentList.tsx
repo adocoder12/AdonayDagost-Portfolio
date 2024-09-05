@@ -54,7 +54,12 @@ const skills = [
 export default function SkillsComponentList({ className }: TskillsList) {
   return (
     <>
-      <div className={cn("grid  grid-cols-2 lg:grid-cols-3 ", className)}>
+      <div
+        className={cn(
+          "grid grid-cols-1   md:grid-cols-2 lg:grid-cols-3 ",
+          className
+        )}
+      >
         {skills.map((skill) => (
           // title and icon wrapper
           <div
@@ -64,7 +69,7 @@ export default function SkillsComponentList({ className }: TskillsList) {
             <h4 className="text-lg font-semibold ">{skill.title}</h4>
 
             {/* // skill items */}
-            <div className=" grid grid-cols-2 w-40 grid-flow-row-dense   gap-y-8 items-center   md:gap-x-2 md:gap-y-8 ">
+            <div className=" grid grid-cols-2 md:grid-cols-4  w-40  md:w-60 grid-flow-row-dense   gap-y-8 items-cente justify-center   md:gap-x-4 md:gap-y-8 ">
               {skill.items.map((item) => {
                 return <SkillsItem item={item} />;
               })}

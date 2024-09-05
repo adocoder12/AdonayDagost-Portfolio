@@ -48,7 +48,7 @@ export default function Footer() {
         </h3>
 
         {/* Navigation Links */}
-        <ul className="flex flex-col justify-start flex-wrap  gap-y-6">
+        <ul className="flex flex-col justify-start flex-wrap  gap-y-2">
           {navLinks.map(({ name, link }) => (
             <li key={link}>
               <NavItem name={name} link={link} />

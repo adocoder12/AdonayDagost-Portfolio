@@ -34,7 +34,7 @@ export default function HomePage({ services }: { services: TServices[] }) {
       </Helmet>
 
       <Hero links={btnLinks} />
-      <section className="grid grid-cols-1 items-center   md:max-w-screen-lg  text-center p-5 gap-y-8 w-full  my-6 ">
+      <section className="grid grid-cols-1 items-center   md:max-w-screen-xl  text-center p-5 gap-y-8 w-full  my-6 ">
         <p
           className="text-lg w-full md:text-xl lg:text-2xl text-center  text-content "
           style={{ lineHeight: "1.9" }}
