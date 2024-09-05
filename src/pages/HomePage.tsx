@@ -20,13 +20,13 @@ export default function HomePage({ services }: { services: TServices[] }) {
       />
       <section className="grid grid-cols-1 items-center   md:max-w-screen-lg  text-center p-5 gap-y-8 w-full  my-6 ">
         <p
-          className="text-xl w-full md:text-2xl text-center font-normal  text-content leading-[2.4]"
-          style={{ lineHeight: "1.8" }}
+          className="text-lg w-full md:text-xl lg:text-2xl text-center  text-content "
+          style={{ lineHeight: "1.9" }}
         >
-          "My passion for creativity and problem-solving led me to explore
+          " My passion for creativity and problem-solving led me to explore
           frontend development. <br></br> The moment I crafted my first webpage,
           I was hooked—fascinated by the power to transform ideas into
-          interactive digital experiences."
+          interactive digital experiences"
         </p>
         <Button className="mx-auto w-auto" btnHerf="projects">
           Know more About my journey
@@ -47,7 +47,7 @@ export default function HomePage({ services }: { services: TServices[] }) {
         <h2 className="text-xl   md:text-4xl font-semibold leading-tight">
           Mastering the Craft:
         </h2>
-        <p className="font-light ">
+        <p className="font-light text-lg lg:text-xl leading-relaxed  text-wrap">
           Innovation, creativity, and passion come together in the projects I’ve
           crafted. Each project reflects a commitment to excellence and a love
           for problem-solving, whether it's developing intuitive user

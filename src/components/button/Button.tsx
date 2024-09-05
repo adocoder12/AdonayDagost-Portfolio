@@ -31,7 +31,7 @@ export default function Button({
   return (
     <div
       className={cn(
-        "inline-flex items-center relative mr-2 group w-full",
+        "inline-flex items-center relative  group w-full",
         className
       )}
     >

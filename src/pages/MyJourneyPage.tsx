@@ -4,11 +4,11 @@ export default function MyJourneyPage() {
   return (
     <>
       <PagesHeader
-        secondaryTitle="Hi, I’m Adonay D´agosto"
-        description="Junior Software developer , amateur cook & Skater, guitarist, tinkerer, and general curious person_"
+        secondaryTitle="Hi, I’m Adonay D'agosto"
+        description="A Frontend developer , I love to cook , Skate, play guitar and code."
       />
       <div className="grid grid-cols-1 w-full max-w-6xl gap-y-8 place-content-center py-3 md:py-5 text-content text-2xl">
-        <p className="ttext-sm  md:text-md  font-light md:text-xl text-wrap  ">
+        <p className="text-sm  md:text-md  font-light md:text-xl text-wrap  ">
           My journey into frontend development was fueled by a deep passion for
           creativity and problem-solving. From the moment I built my first
           simple webpage, I was captivated by the ability to bring ideas to life
