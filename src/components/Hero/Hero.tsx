@@ -17,11 +17,7 @@ export default function Hero({ links, className }: THero) {
       {/* Text Section */}
       <div className="flex  mx-auto ml-10 lg:items-start  flex-col  lg:ml-20">
         <h2 className="text-md font-normal leading-tight text-start">
-          Hi{" "}
-          <span className="animate-wiggle-more animate-infinite animate-ease-linear animate-normal animate-fill-both">
-            ✋🏾
-          </span>{" "}
-          , here is Ado behind the keyboard.
+          Hi ✋🏾, here is Ado behind the keyboard.
         </h2>
         <h1 className="text-4xl  md:text-7xl  xl:text-8xl font-bold my-2  w-full max-w-[480px] leading-tight">
           Frontend Developer.

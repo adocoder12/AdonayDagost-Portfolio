@@ -32,10 +32,8 @@ export default function HomePage({ services }: { services: TServices[] }) {
         <title>Adonay D'agosto | {currentPage}</title>
         <meta name="description" content="Portfolio projects" />
       </Helmet>
-      <Hero
-        links={btnLinks}
-        className="animate-fade animate-once animate-duration-[2000ms] animate-delay-[10ms] animate-ease-in-out"
-      />
+
+      <Hero links={btnLinks} />
       <section className="grid grid-cols-1 items-center   md:max-w-screen-lg  text-center p-5 gap-y-8 w-full  my-6 ">
         <p
           className="text-lg w-full md:text-xl lg:text-2xl text-center  text-content "

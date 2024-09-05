@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Suspense, lazy } from "react";
+// import { lazy } from "react";
 
 // Components
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import Loader from "./components/Loader/Loader";
+// import Loader from "./components/Loader/Loader";
 
 //ui componnents
 import MainContainer from "./components/UI/MainContainer/MainContainer";
@@ -16,19 +16,26 @@ import { services } from "@/utils/services";
 import ScrollToTop from "@utils/hooks/ScrollToTop";
 
 // Lazy load the pages
-const HomePage = lazy(() => import("./pages/HomePage"));
-const SinglePage = lazy(() => import("./pages/SinglePage"));
-const ServicesPage = lazy(() => import("./pages/ServicesPage"));
-const MyJourneyPage = lazy(() => import("./pages/MyJourneyPage"));
+// const HomePage = lazy(() => import("./pages/HomePage"));
+// const SinglePage = lazy(() => import("./pages/SinglePage"));
+// const ServicesPage = lazy(() => import("./pages/ServicesPage"));
+// const MyJourneyPage = lazy(() => import("./pages/MyJourneyPage"));
+
+//pages
+import HomePage from "./pages/HomePage";
+import SinglePage from "./pages/SinglePage";
+import ServicesPage from "./pages/ServicesPage";
+import MyJourneyPage from "./pages/MyJourneyPage";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   return (
     <div className="app">
       <BrowserRouter>
         <Header />
-        <MainContainer className="">
-          <ScrollToTop />
-          <Suspense fallback={<Loader />}>
+        <MainContainer>
+          <AnimatePresence initial={false}>
+            <ScrollToTop />
             <Routes>
               <Route
                 index
@@ -44,7 +51,7 @@ function App() {
               {/* Not found */}
               <Route path="*" element={<h1>404 Not Found</h1>} />
             </Routes>
-          </Suspense>
+          </AnimatePresence>
         </MainContainer>
         <Footer />
       </BrowserRouter>
