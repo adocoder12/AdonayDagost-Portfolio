@@ -21,7 +21,7 @@ export default function GallerySection({
 
   return (
     <>
-      <div className="grid grid-cols-1  p-6 lg:grid-cols-3 lg:grid-flow-col-dense gap-y-12 md: gap-4 ">
+      <div className="grid grid-cols-1  p-6 lg:grid-cols-3 lg:grid-flow-col-dense gap-y-12 md: gap-4 max-w-7xl ">
         {services.map((service, idx) => (
           <GalleryCard
             service={service}

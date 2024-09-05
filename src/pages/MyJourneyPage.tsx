@@ -23,7 +23,7 @@ export default function MyJourneyPage() {
         secondaryTitle="Hi, I’m Adonay D'agosto"
         description="A Frontend developer , I love to cook , Skate, play guitar and code."
       />
-      <div className="grid grid-cols-1 w-full max-w-6xl gap-y-8 place-content-center py-3 md:py-5 text-content text-2xl">
+      <div className="grid grid-cols-1 w-full max-w-7xl gap-y-8 place-content-center py-3 md:py-5 text-content text-2xl">
         <p className="text-sm  md:text-md  font-light md:text-xl text-wrap  ">
           My journey into frontend development was fueled by a deep passion for
           creativity and problem-solving. From the moment I built my first

@@ -25,7 +25,7 @@ export default function SingleProduct({
   };
 
   return (
-    <section className="grid p-2 md:p-4 w-full min-h-screen   text-content">
+    <section className="grid p-2 md:p-4 max-w-7xl min-h-screen   text-content">
       {/* Photo Section */}
       <div className="flex p-3 flex-col lg:flex-row lg:flex-1 gap-4 bg-content/5 rounded-lg shadow-md order-2">
         <Suspense fallback={<Loader />}>
