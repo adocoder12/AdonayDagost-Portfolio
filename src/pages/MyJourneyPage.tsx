@@ -23,7 +23,7 @@ export default function MyJourneyPage() {
         secondaryTitle="Hi, I’m Adonay D'agosto"
         description="a software developer who I loves to code, skate and play guitar."
       />
-      <div className="grid grid-cols-1 w-full max-w-5xl gap-y-8 place-content-center py-3 md:py-5 text-content text-2xl">
+      <div className="grid grid-cols-1 w-full max-w-4xl gap-y-8 place-content-center py-3 md:py-5 text-content text-2xl">
         <p className="text-sm  md:text-md  font-light md:text-xl text-wrap  ">
           I’m a frontend developer with a deep passion for creativity and
           problem-solving. From the moment I built my first webpage, I was
