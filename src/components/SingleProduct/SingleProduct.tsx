@@ -17,8 +17,6 @@ export default function SingleProduct({
   const [selectedThumbnail, setSelectedThumbnail] = useState<Thumbnail>();
 
   const mainThumbnail = useMemo(() => {
-    // Complex logic to determine the main thumbnail
-    // Example: returning the first thumbnail by default or some other logic
     return selectedThumbnail || thumbnails[0];
   }, [selectedThumbnail, thumbnails]);
 
