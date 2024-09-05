@@ -21,10 +21,10 @@ export default function GallerySection({
 
   return (
     <>
-      <div className="grid grid-cols-1  p-6 lg:grid-cols-2  gap-y-12 md: gap-5 max-w-7xl  lg:last:col-span-full  last:col-auto">
+      <div className="grid grid-cols-1  p-6 lg:grid-cols-2  gap-y-4 md:gap-5 max-w-7xl  lg:last:col-span-full  last:col-auto">
         {services.map((service, idx) => (
           <div
-            className=" flex flex-col items-center justify-center gap-y-8 p-4 lg:gap-x-4  text-content  lg:last:col-span-full  last:col-auto"
+            className=" flex flex-col items-center justify-center gap-y-8 p-2 lg:gap-x-1   text-content  lg:last:col-span-full  last:col-auto"
             key={idx}
           >
             <GalleryCard
