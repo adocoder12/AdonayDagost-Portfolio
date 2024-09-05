@@ -4,12 +4,13 @@ import { IoMail } from "react-icons/io5";
 
 //contact icons
 import { FaPhoneAlt, FaRegEnvelope } from "react-icons/fa";
+import NavItem from "../Header/NavItem/NavItem";
 
 export default function Footer() {
   const navLinks = [
     { name: "Home", link: "/" },
-    { name: "My journey", link: "/my-journey" },
     { name: "Projects", link: "/projects" },
+    { name: "My journey", link: "/my-journey" },
   ];
 
   const socialLinks = [
@@ -50,17 +51,7 @@ export default function Footer() {
         <ul className="flex flex-col justify-start flex-wrap  gap-y-6">
           {navLinks.map(({ name, link }) => (
             <li key={link}>
-              <Link
-                rel="noopener noreferrer"
-                className="relative font-normal text-md transition-colors uppercase  group  hover:text-black"
-                to={link}
-                aria-label={name}
-              >
-                {name}
-                <span
-                  className={`absolute -bottom-1 left-0 w-0 h-[3px] bg-decorator transition-all group-hover:scale-105 group-hover:w-full `}
-                ></span>
-              </Link>
+              <NavItem name={name} link={link} />
             </li>
           ))}
         </ul>
