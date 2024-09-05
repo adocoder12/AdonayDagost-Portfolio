@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 // import { lazy } from "react";
 
 // Components
@@ -8,6 +8,7 @@ import Footer from "@/components/Footer/Footer";
 
 //ui componnents
 import MainContainer from "./components/UI/MainContainer/MainContainer";
+import AnimatedRoutes from "./components/AnimatedRoutes/AnimatedRoutes";
 
 //data
 import { services } from "@/utils/services";
@@ -22,11 +23,10 @@ import ScrollToTop from "@utils/hooks/ScrollToTop";
 // const MyJourneyPage = lazy(() => import("./pages/MyJourneyPage"));
 
 //pages
-import HomePage from "./pages/HomePage";
-import SinglePage from "./pages/SinglePage";
-import ServicesPage from "./pages/ServicesPage";
-import MyJourneyPage from "./pages/MyJourneyPage";
-import { AnimatePresence } from "framer-motion";
+// import HomePage from "./pages/HomePage";
+// import SinglePage from "./pages/SinglePage";
+// import ServicesPage from "./pages/ServicesPage";
+// import MyJourneyPage from "./pages/MyJourneyPage";
 
 function App() {
   return (
@@ -34,24 +34,8 @@ function App() {
       <BrowserRouter>
         <Header />
         <MainContainer>
-          <AnimatePresence initial={false}>
-            <ScrollToTop />
-            <Routes>
-              <Route
-                index
-                path="/"
-                element={<HomePage services={services} />}
-              />
-              <Route path="/my-journey" element={<MyJourneyPage />} />
-              <Route
-                path="/projects/"
-                element={<ServicesPage services={services} />}
-              />
-              <Route path="/projects/:id" element={<SinglePage />} />
-              {/* Not found */}
-              <Route path="*" element={<h1>404 Not Found</h1>} />
-            </Routes>
-          </AnimatePresence>
+          <ScrollToTop />
+          <AnimatedRoutes services={services} />
         </MainContainer>
         <Footer />
       </BrowserRouter>
