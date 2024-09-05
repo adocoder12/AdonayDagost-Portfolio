@@ -33,7 +33,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full p-8 bg-mainColor shadow-md text-content">
+    <footer className="w-full p-8 bg-mainColor/20 shadow-md text-content ">
       <div className="flex flex-col items-start justify-around gap-8 md:flex-row ">
         {/* Footer Branding */}
         {/* <img
