@@ -34,7 +34,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full p-8 bg-mainColor shadow-md text-content">
-      <div className="flex flex-col items-start justify-between gap-8 md:flex-row ">
+      <div className="flex flex-col items-start justify-around gap-8 md:flex-row ">
         {/* Footer Branding */}
         {/* <img
           src="https://www.js-craft.io/wp-content/uploads/2023/06/biker_cat.webp"
@@ -102,7 +102,7 @@ export default function Footer() {
         </ul>
       </div>
       <hr className="my-8 border-blue-gray-50" />
-      <div className="flex flex-col items-center  gap-y-2 md:gap-y-0   justify-between  md:flex-row ">
+      <div className="flex flex-col items-center  gap-y-2 md:gap-y-0   justify-around  md:flex-row ">
         <p className="text-xs md:text-md order-1 md:order-1">
           &copy; 2024 Kinuski Inc.
         </p>
