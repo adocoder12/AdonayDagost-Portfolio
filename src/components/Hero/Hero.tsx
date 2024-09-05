@@ -17,10 +17,10 @@ export default function Hero({ links, className }: THero) {
       {/* Text Section */}
       <div className="flex  mx-auto ml-10 lg:items-start  flex-col  lg:ml-20">
         <h2 className="text-md font-normal leading-tight text-start">
-          Hi ✋🏾, here is Ado behind the keyboard.
+          Hi ✋🏾, here is Ado.
         </h2>
-        <h1 className="text-4xl  md:text-7xl  xl:text-8xl font-bold my-2  w-full max-w-[480px] leading-tight">
-          Frontend Developer.
+        <h1 className="text-6xl uppercase md:text-7xl  xl:text-8xl font-bold my-2  w-full max-w-[480px] leading-tight">
+          A Frontend Developer.
         </h1>
         {/* <h4 className="font-bold mb-6 ">Based in Finland.</h4> */}
         <div className="flex items-center space-x-2">
