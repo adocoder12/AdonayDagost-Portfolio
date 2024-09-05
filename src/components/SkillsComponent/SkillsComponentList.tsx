@@ -54,16 +54,11 @@ const skills = [
 export default function SkillsComponentList({ className }: TskillsList) {
   return (
     <>
-      <div
-        className={cn(
-          "grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ",
-          className
-        )}
-      >
+      <div className={cn("grid  grid-cols-2 lg:grid-cols-3 ", className)}>
         {skills.map((skill) => (
           // title and icon wrapper
           <div
-            className=" flex flex-col items-center justify-center gap-y-8 p-4 lg:gap-x-4  text-content  md:last:col-span-full  lg:last:col-auto"
+            className=" flex flex-col items-center justify-center gap-y-8 p-4 lg:gap-x-4  text-content  last:col-span-full  lg:last:col-auto"
             key={skill.title}
           >
             <h4 className="text-lg font-semibold ">{skill.title}</h4>

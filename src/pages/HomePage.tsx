@@ -41,8 +41,8 @@ export default function HomePage({ services }: { services: TServices[] }) {
         >
           " My passion for creativity and problem-solving led me to explore
           frontend development. <br></br> The moment I crafted my first webpage,
-          I was hooked—fascinated by the power to transform ideas into
-          interactive digital experiences"
+          I was by the power to transform ideas into interactive digital
+          experiences "
         </p>
         <Button className="mx-auto w-auto" btnHerf="projects">
           Know more About my journey
