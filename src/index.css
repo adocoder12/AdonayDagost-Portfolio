@@ -27,7 +27,7 @@
   /* OWN classes */
 
   .app {
-    @apply flex flex-col items-center justify-center gap-y-2 bg-mainColor;
+    @apply flex flex-col items-center justify-center gap-y-3 bg-mainColor;
   }
   /* Menu nav */
 
