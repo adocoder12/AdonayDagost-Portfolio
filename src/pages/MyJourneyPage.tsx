@@ -21,7 +21,7 @@ export default function MyJourneyPage() {
       </Helmet>
       <PagesHeader
         secondaryTitle="Hi, I’m Adonay D'agosto"
-        description="A Frontend developer , I love to cook , Skate, play guitar and code."
+        description="a software developer who I loves to code, skate and play guitar."
       />
       <div className="grid grid-cols-1 w-full max-w-7xl gap-y-8 place-content-center py-3 md:py-5 text-content text-2xl">
         <p className="text-sm  md:text-md  font-light md:text-xl text-wrap  ">
