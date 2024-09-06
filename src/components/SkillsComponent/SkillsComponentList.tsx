@@ -35,8 +35,8 @@ const skills = [
   {
     title: "Tools & Platforms",
     items: [
-      { name: "Git", icon: FaGitAlt, color: "text-red-600" },
-      { name: "GitHub", icon: FaGithub, color: "text-gray-800" },
+      { name: "Git", icon: FaGitAlt, color: "text-red-700" },
+      { name: "GitHub", icon: FaGithub, color: "text-white-800" },
       { name: "WordPress", icon: FaWordpress, color: "text-blue-800" },
     ],
   },
@@ -69,7 +69,7 @@ export default function SkillsComponentList({ className }: TskillsList) {
             <h4 className="text-lg font-semibold ">{skill.title}</h4>
 
             {/* // skill items */}
-            <div className=" grid grid-cols-2 md:grid-cols-4  w-40  md:w-60 grid-flow-row-dense   gap-y-8 items-cente justify-center   md:gap-x-4 md:gap-y-8 ">
+            <div className=" grid grid-cols-2 md:grid-flow-col-dense  w-40  md:w-60 grid-flow-row-dense   gap-y-8 items-cente justify-center   md:gap-x-4 md:gap-y-8 ">
               {skill.items.map((item) => {
                 return <SkillsItem item={item} />;
               })}

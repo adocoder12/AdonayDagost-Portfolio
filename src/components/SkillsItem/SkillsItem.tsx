@@ -11,7 +11,7 @@ export default function SkillsItem({ item }: { item: TSkills }) {
   return (
     <>
       <div className="flex flex-col items-center gap-y-3">
-        <button className="relative group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-700 to-black text-white font-semibold hover:translate-y-3 transition-all duration-500 hover:from-[#331029] hover:to-${item.color} ">
+        <button className="relative group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-700 to-black text-white font-semibold hover:translate-y-3 transition-all duration-500  hover:${item.color} ">
           <Icon
             key={item.name}
             color={`${item.color}`}
