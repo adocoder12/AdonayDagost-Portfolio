@@ -24,7 +24,10 @@ export default function MyJourneyPage() {
         description="a software developer who I loves to code, skate and play guitar."
       />
       <div className="grid grid-cols-1 w-full max-w-5xl gap-y-8 place-content-center py-3 md:py-5 text-content ">
-        <p className="text-sm  md:text-md  font-light md:text-xl text-justify leading-8  ">
+        <p
+          className="text-sm  md:text-md  font-light md:text-xl text-justify"
+          style={{ lineHeight: "1.7" }}
+        >
           I’m a frontend developer with a deep passion for creativity and
           problem-solving. From the moment I built my first webpage, I was
           hooked by how design and functionality bring ideas to life. Using
