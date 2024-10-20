@@ -50,7 +50,7 @@ export default function HomePage({ services }: { services: TServices[] }) {
       </section>
 
       {/* SKils section */}
-      <section className=" grid grid-cols-1   py-3 md:py-5 space-y-8 text-content text-2xl leading-tight max-w-[80rem] my-20">
+      <section className=" grid grid-cols-1   py-3 md:py-5 space-y-8 text-content text-2xl leading-tight max-w-7xl my-20">
         <h2 className="text-xl  md:text-4xl font-semibold leading-tight">
           Skills I've honed to excel as a frontend developer.
         </h2>
@@ -59,11 +59,11 @@ export default function HomePage({ services }: { services: TServices[] }) {
       </section>
 
       {/* GALLERY SECTION */}
-      <section className=" grid min-h-screen grid-cols-1  py-3  md:py-5 space-y-8 text-content text-2xl leading-tight max-w-6xl mb-8">
+      <section className=" grid min-h-screen grid-cols-1  py-3  md:py-5 space-y-8 text-content text-2xl leading-tight max-w-7xl mb-8">
         <h2 className="text-xl   md:text-4xl font-semibold leading-tight">
           Mastering the Craft:
         </h2>
-        <p className="font-light text-lg lg:text-xl leading-relaxed  text-wrap">
+        <p className="font-light text-lg lg:text-xl leading-relaxed  lg:max-w-md  text-wrap">
           Innovation, creativity, and passion come together in the projects I’ve
           crafted. Each project reflects a commitment to excellence and a love
           for problem-solving, whether it's developing intuitive user
