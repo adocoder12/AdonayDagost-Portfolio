@@ -33,7 +33,10 @@ export default function PagesHeader({
           <h3 className="text-xl md:text-4xl font-bold my-2 leading-tight uppercase">
             {secondaryTitle}
           </h3>
-          <p className="text-content text-md md:text-xl font-ligth max-w-3xl text-wrap ">
+          <p
+            className="text-content text-md md:text-xl font-ligth max-w-3xl text-justify "
+            style={{ lineHeight: "1.7" }}
+          >
             {description}
           </p>
         </div>
