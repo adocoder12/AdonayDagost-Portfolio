@@ -64,7 +64,7 @@ export default function HomePage({ services }: { services: TServices[] }) {
           Mastering the Craft:
         </h2>
         <p
-          className="font-light text-lg lg:text-xl   text-justify  "
+          className="font-light text-lg lg:text-xl  text-justify  "
           style={{ lineHeight: "1.7" }}
         >
           Innovation, creativity, and passion come together in the projects I’ve
