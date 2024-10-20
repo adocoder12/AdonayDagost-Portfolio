@@ -48,7 +48,7 @@ export default function SingleProduct({
         <h1 className="text-primary text-3xl font-bold mb-4">{subtitle}</h1>
         <hr className="border-decorator border-2 b-4 max-w-[96%]" />
         <p
-          className="text-highlight text-lg leading-relaxed mt-6 text-justify"
+          className="text-highlight text-lg mt-6 text-justify"
           style={{ lineHeight: "1.7" }}
         >
           {description}
