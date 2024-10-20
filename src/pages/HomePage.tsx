@@ -63,7 +63,7 @@ export default function HomePage({ services }: { services: TServices[] }) {
         <h2 className="text-xl   md:text-4xl font-semibold leading-tight">
           Mastering the Craft:
         </h2>
-        <p className="font-light text-lg lg:text-xl leading-loose  text-justify  ">
+        <p className="font-light text-lg lg:text-xl leading-8  text-justify  ">
           Innovation, creativity, and passion come together in the projects I’ve
           crafted. Each project reflects a commitment to excellence and a love
           for problem-solving, whether it's developing intuitive user
