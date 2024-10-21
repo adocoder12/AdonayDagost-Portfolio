@@ -27,7 +27,7 @@ export default function GalleryCard({ service, className }: GalleryCardProps) {
     >
       <img
         alt={service.thumbnail.alt}
-        className="w-full h-full rounded-lg object-cover "
+        className="w-full h-auto rounded-lg object-cover "
         src={service.thumbnail.src}
       />
       <div className="flex flex-col items-center gap-y-0 ">
