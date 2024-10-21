@@ -7,6 +7,7 @@ import Hero from "@/components/Hero/Hero";
 const GallerySection = lazy(
   () => import("@/components/GallerySection/GallerySection")
 );
+// import GallerySection from "@/components/GallerySection/GallerySection";
 import SkillsComponentList from "@/components/SkillsComponent/SkillsComponentList";
 import Loader from "@/components/Loader/Loader";
 
