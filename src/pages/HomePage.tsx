@@ -1,10 +1,15 @@
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { lazy, Suspense } from "react";
 
 //component
 import Hero from "@/components/Hero/Hero";
-import GallerySection from "@/components/GallerySection/GallerySection";
+const GallerySection = lazy(
+  () => import("@/components/GallerySection/GallerySection")
+);
+// import GallerySection from "@/components/GallerySection/GallerySection";
 import SkillsComponentList from "@/components/SkillsComponent/SkillsComponentList";
+import Loader from "@/components/Loader/Loader";
 
 //type
 import { TServices } from "@/utils/types/types";
@@ -69,7 +74,9 @@ export default function HomePage({ services }: { services: TServices[] }) {
           work, each piece representing a unique challenge that I’ve tackled
           with dedication and expertise.
         </p>
-        <GallerySection services={services} />
+        <Suspense fallback={<Loader />}>
+          <GallerySection services={services} />
+        </Suspense>
       </section>
     </>
   );
