@@ -35,10 +35,7 @@ export default function HomePage({ services }: { services: TServices[] }) {
 
       <Hero links={btnLinks} />
       <section className="grid grid-cols-1 items-center   md:max-w-screen-xl  text-center p-5 gap-y-8 w-full  my-6 ">
-        <p
-          className="text-md w-full md:text-xl lg:text-2xl text-center  text-content "
-          style={{ lineHeight: "1.9" }}
-        >
+        <p className="text-md leading-relaxed w-full md:text-xl md:leading-relaxed lg:text-2xl  lg:leading-loose  text-center  text-content ">
           " My passion for creativity and problem-solving led me to explore
           frontend development. <br></br> The moment I crafted my first webpage,
           I was by the power to transform ideas into interactive digital
@@ -63,7 +60,7 @@ export default function HomePage({ services }: { services: TServices[] }) {
         <h2 className="text-xl   md:text-4xl font-semibold leading-tight">
           Mastering the Craft:
         </h2>
-        <p className="font-light text-md md:text-lg lg:text-xl leading-loose text-justify">
+        <p className="font-light text-md leading-loose md:text-lg md:leading-loose lg:text-xl lg:leading-loose text-justify">
           Innovation, creativity, and passion come together in the projects I’ve
           crafted. Each project reflects a commitment to excellence and a love
           for problem-solving, whether it's developing intuitive user
