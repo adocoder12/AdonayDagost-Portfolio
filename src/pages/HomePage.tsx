@@ -7,7 +7,6 @@ import Hero from "@/components/Hero/Hero";
 const GallerySection = lazy(
   () => import("@/components/GallerySection/GallerySection")
 );
-// import GallerySection from "@/components/GallerySection/GallerySection";
 import SkillsComponentList from "@/components/SkillsComponent/SkillsComponentList";
 import Loader from "@/components/Loader/Loader";
 
@@ -74,6 +73,7 @@ export default function HomePage({ services }: { services: TServices[] }) {
           work, each piece representing a unique challenge that I’ve tackled
           with dedication and expertise.
         </p>
+
         <Suspense fallback={<Loader />}>
           <GallerySection services={services} />
         </Suspense>
