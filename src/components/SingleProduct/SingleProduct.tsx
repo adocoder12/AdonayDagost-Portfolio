@@ -47,10 +47,7 @@ export default function SingleProduct({
       <div className="flex flex-col justify-between p-6">
         <h1 className="text-primary text-3xl font-bold mb-4">{subtitle}</h1>
         <hr className="border-decorator border-2 b-4 max-w-[96%]" />
-        <p
-          className="text-highlight text-lg lg:leading[1.7] mt-6 text-justify"
-          style={{ lineHeight: "1.7" }}
-        >
+        <p className="text-highlight text-lg leading-loose  mt-6 text-justify">
           {description}
         </p>
       </div>
