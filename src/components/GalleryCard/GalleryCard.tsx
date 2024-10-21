@@ -21,13 +21,13 @@ export default function GalleryCard({ service, className }: GalleryCardProps) {
     <div
       onClick={handleOnClick}
       className={cn(
-        "flex flex-col items-center gap-y-1 cursor-pointer max-w-3xl  w-full  h-full ",
+        "flex flex-col items-center gap-y-1 cursor-pointer  aspect-[4/2] w-full   hover:scale-105  hover:animate-ease-in-out",
         className
       )}
     >
       <img
         alt={service.thumbnail.alt}
-        className=" w-full h-[70%] "
+        className="w-full h-full rounded-lg object-cover "
         src={service.thumbnail.src}
       />
       <div className="flex flex-col items-center gap-y-0 ">

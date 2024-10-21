@@ -21,17 +21,16 @@ export default function GallerySection({
 
   return (
     <>
-      <div className="grid grid-cols-1  p-6 lg:grid-cols-2  gap-y-4 md:gap-5 max-w-7xl  lg:last:col-span-full  last:col-auto">
+      <div className="grid grid-cols-1  p-6 lg:grid-cols-2  gap-y-4 md:gap-5 max-w-7xl  ">
         {services.map((service, idx) => (
           <div
-            className=" flex flex-col items-center justify-center gap-y-8 p-2 lg:gap-x-1   text-content  lg:last:col-span-full  last:col-auto"
+            className=" flex flex-col items-center justify-center gap-y-4 p-4 lg:gap-x-1 drop-shadow-xl text-content lg:last:col-span-full    "
             key={idx}
           >
             <GalleryCard
               service={service}
               animationDelay={getAnimationDelay(idx)}
-              className={`hover:scale-105  hover:animate-ease-in-out
-                `}
+              className={``}
             />
           </div>
         ))}

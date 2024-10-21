@@ -13,10 +13,10 @@ export default function SingleProductThumbnails({
 }: TSingleProductThumbnail) {
   return (
     <>
-      <div className="grid grid-cols-2 my-auto  items-center gap-4 p-4 rounded-sm  md:mx-auto  md:grid-cols-4 md:max-w-fit lg:flex lg:flex-col lg:flex-nowrap  lg:max-h-[80vh] lg:w-1/4  overflow-auto">
+      <div className="grid grid-cols-2 my-auto  items-center gap-4 p-4 rounded-sm  md:mx-auto  md:grid-cols-4 md:max-w-fit lg:flex lg:flex-col lg:flex-nowrap  lg:max-h-[80vh] lg:w-1/4  overflow-auto backdrop-brightness-125 ">
         {thumbnails!.map((thumbnail, index) => (
           <div
-            className="flex justify-center  lg:justify-center snap-start p-2"
+            className="flex justify-center  lg:justify-center snap-start p-2 	"
             key={index}
           >
             <img
