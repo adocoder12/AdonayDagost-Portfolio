@@ -16,18 +16,6 @@ import { services } from "@/utils/services";
 //hooks
 import ScrollToTop from "@utils/hooks/ScrollToTop";
 
-// Lazy load the pages
-// const HomePage = lazy(() => import("./pages/HomePage"));
-// const SinglePage = lazy(() => import("./pages/SinglePage"));
-// const ServicesPage = lazy(() => import("./pages/ServicesPage"));
-// const MyJourneyPage = lazy(() => import("./pages/MyJourneyPage"));
-
-//pages
-// import HomePage from "./pages/HomePage";
-// import SinglePage from "./pages/SinglePage";
-// import ServicesPage from "./pages/ServicesPage";
-// import MyJourneyPage from "./pages/MyJourneyPage";
-
 function App() {
   return (
     <div className="app">

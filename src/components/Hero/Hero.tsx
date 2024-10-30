@@ -1,4 +1,5 @@
 import { cn } from "@/utils/cn";
+import { Suspense } from "react";
 // typees of components
 import { THero } from "@/utils/types/types";
 //components
@@ -41,11 +42,13 @@ export default function Hero({ links, className }: THero) {
           A.D
         </h2>
         {/* Profile Image */}
-        <img
-          src={profilePic}
-          alt="selfPic"
-          className="w-sm h-2/3   object-cover object-center rounded-md  shadow-lg bg-center "
-        />
+        <Suspense>
+          <img
+            src={profilePic}
+            alt="selfPic"
+            className="w-sm h-2/3   object-cover object-center rounded-md  shadow-lg bg-center "
+          />
+        </Suspense>
       </div>
     </section>
   );
