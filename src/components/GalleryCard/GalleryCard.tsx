@@ -1,13 +1,10 @@
-import { cn } from "@/utils/cn";
 import { useNavigate } from "react-router-dom";
-
-// Types
 import { TServices } from "@/utils/types/types";
+import { cn } from "@/utils/cn";
 
 type GalleryCardProps = {
   service: TServices;
   className?: string;
-  animationDelay?: string;
 };
 
 export default function GalleryCard({ service, className }: GalleryCardProps) {
@@ -21,22 +18,48 @@ export default function GalleryCard({ service, className }: GalleryCardProps) {
     <div
       onClick={handleOnClick}
       className={cn(
-        "flex flex-col items-center gap-y-1 cursor-pointer  aspect-[4/2] w-full   hover:scale-105  hover:animate-ease-in-out",
-        className
+        "group flex flex-col w-full cursor-pointer transition-all duration-300 hover:-translate-y-2",
+        className,
       )}
     >
-      <img
-        alt={service.thumbnail.alt}
-        className="w-full h-auto rounded-lg object-cover "
-        src={service.thumbnail.src}
-      />
-      <div className="flex flex-col items-center gap-y-0 ">
-        <h2 className="text-md md:text-lg uppercase   font-medium  text-content mb-3">
-          {service.title}
-        </h2>
-        <h4 className="tracking-widest text-sm md:text-md font-medium text-content ">
-          {service.subtitle}
-        </h4>
+      {/* 
+          Flexible Image Container 
+          Removed 'aspect-square' so the height isn't forced.
+          Added 'max-h-[400px]' (adjust as needed) to keep grid items uniform.
+      */}
+      <div className="w-full max-h-[450px] overflow-hidden bg-white/5 rounded-sm border border-white/5 flex items-center justify-center">
+        <img
+          alt={service.thumbnail.alt}
+          src={service.thumbnail.src}
+          /* 
+             Using h-auto ensures the image stays in proportion.
+             Removed all scale and rotate hover classes.
+          */
+          className="w-full h-auto object-contain block"
+        />
+      </div>
+
+      {/* Description Section */}
+      <div className="flex flex-col pt-6 px-1">
+        <div className="text-start">
+          <h2 className="text-xl md:text-3xl font-black uppercase tracking-tighter text-content leading-tight mb-1">
+            {service.title}_
+          </h2>
+
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-decorator mb-4">
+            {service.subtitle}
+          </p>
+
+          <p className="text-content text-sm md:text-base font-light leading-relaxed line-clamp-3 opacity-70">
+            {service.description}
+          </p>
+        </div>
+
+        {/* Keeping the 'Archive' text as the only subtle hover indicator */}
+        <div className="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <span>View Archive_</span>
+          <span className="text-decorator">→</span>
+        </div>
       </div>
     </div>
   );

@@ -1,39 +1,103 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+/* 1. Standard CSS Variables (Visible to the browser) */
 :root {
-  --color-background: #2c475c;
-  --color-text: #f4f9fc;
-  --color-title: #f4f9fc;
-  --color-decoration: #997a66;
+  --background: #e8edf2;
+  --text: #111111;
+  --title: #f4f9fc;
+  --decorator: #997a66;
+  --font-mono: "Courier Prime", monospace;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  line-height: 1.5;
+/* 2. Tailwind Theme (Tells Tailwind how to make classes like bg-background) */
+@theme {
+  --color-background: var(--background);
+  --color-text: var(--text);
+  --color-title: var(--title);
+  --color-decorator: var(--decorator);
+  --font-mono: var(--font-mono);
 }
 
+/* 3. Base Resets */
 @layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+    background-color: var(--background);
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
   body {
+    @apply min-h-screen antialiased;
     min-width: 320px;
-    min-height: 100vh;
-    background-color: var(--color-background);
-    font-family: "Courier Prime", sans-serif;
+    color: var(--text);
+    font-family: var(--font-mono);
   }
 
-  /* OWN classes */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tighter uppercase;
+    color: var(--text);
+  }
+}
 
+/* 4. Layout Components */
+@layer components {
   .app {
-    @apply flex flex-col items-center justify-center gap-y-3 bg-mainColor;
-  }
-  /* Menu nav */
-
-  .active {
-    @apply text-slate-800 font-medium;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+    min-height: 100vh;
   }
 
-  /* loader */
+  .container-sized {
+    display: block;
+    width: 100%;
+    padding-inline: 52px;
+
+    @media (max-width: 992px) {
+      padding-inline: 32px;
+    }
+    @media (max-width: 768px) {
+      padding-inline: 16px;
+    }
+    @media (max-width: 528px) {
+      padding-inline: 12px;
+    }
+  }
+
+  .main-container {
+    display: grid;
+    padding-top: 100px;
+    width: 100%;
+    max-width: 1512px;
+    margin: 0 auto;
+    padding-inline: 52px;
+
+    @media (max-width: 768px) {
+      padding-top: 80px;
+      padding-inline: 20px;
+    }
+  }
+}
+
+/* 5. Custom Scrollbar */
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--decorator);
+    border-radius: 5px;
+  }
 }

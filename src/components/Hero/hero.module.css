@@ -1,0 +1,138 @@
+/* ==========================================================================
+   HERO SECTION - PREMIUM REFINEMENT
+   ========================================================================== */
+
+.hero-section-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 720px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+
+  /* Hero wider than the 1200px app container for a cinematic feel */
+  width: calc(100% + 84px);
+  margin: 0 -42px 60px -42px;
+  background-color: var(--color-background);
+  z-index: 1;
+  backface-visibility: hidden;
+
+  @media only screen and (max-width: 768px) {
+    min-height: 600px;
+    border-radius: 0;
+    margin: 0;
+    /* Forces full viewport width on mobile regardless of parent padding */
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  /* --- BACKGROUND GRADIENT MASK --- */
+  .mask {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    /* Blends the image into the background color for high-end contrast */
+    background: linear-gradient(
+      to bottom,
+      rgba(44, 71, 92, 0.3) 0%,
+      rgba(44, 71, 92, 0.15) 35%,
+      rgba(44, 71, 92, 0.4) 70%,
+      var(--color-background) 100%
+    );
+  }
+
+  /* --- BACKGROUND IMAGE LAYER --- */
+  .background-visual {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.6; /* Adjust based on your photo's brightness */
+  }
+
+  /* --- CONTENT CONTAINER --- */
+  .content-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 48px;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+
+    @media only screen and (max-width: 992px) {
+      padding: 32px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      max-width: 100%;
+      padding: 120px 24px;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  /* --- TEXT BLOCK --- */
+  .text-hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: 768px) {
+      align-items: flex-start;
+      text-align: left;
+      gap: 20px;
+      width: 100%;
+    }
+
+    h1 {
+      word-break: break-word;
+      text-wrap: pretty;
+      color: var(--color-textColor);
+      /* Fluid typography: grows between mobile and desktop */
+      font-size: clamp(2.5rem, 6vw + 1rem, 6.5rem);
+      line-height: 1.1;
+      font-weight: 800;
+      max-width: 1100px;
+    }
+
+    h2 {
+      color: var(--color-textColor);
+      opacity: 0.9;
+      font-size: 1.125rem;
+      letter-spacing: 0.1em;
+    }
+
+    p {
+      color: var(--color-text);
+      max-width: 600px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      word-break: auto-phrase;
+    }
+  }
+
+  /* --- BUTTON WRAPPER --- */
+  .hero-btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 24px;
+    color: var(--color-text);
+
+    @media only screen and (max-width: 768px) {
+      justify-content: flex-start;
+    }
+  }
+}

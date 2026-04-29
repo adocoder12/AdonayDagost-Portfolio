@@ -8,75 +8,80 @@ import {
   FaGitAlt,
   FaWordpress,
 } from "react-icons/fa";
-import { SiVitess, SiDjango } from "react-icons/si";
+import {
+  SiVite,
+  SiDjango,
+  SiTailwindcss,
+  SiTypescript,
+  SiPostgresql,
+} from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
-
-//utils
-// import { IconType } from "react-icons";
-import { cn } from "@utils/cn";
-
-type TskillsList = {
-  className?: string;
-};
-
-//components
+import { BiLogoGoLang } from "react-icons/bi";
+import { cn } from "@/utils/cn";
 import SkillsItem from "../SkillsItem/SkillsItem";
 
 const skills = [
   {
-    title: "Programming Languages",
+    title: "Core Technologies_",
     items: [
-      { name: "HTML", icon: FaHtml5, color: "text-orange-500" },
-      { name: "CSS", icon: FaCss3Alt, color: "text-blue-500" },
-      { name: "Python", icon: FaPython, color: "text-yellow-500" },
-      { name: "JavaScript", icon: FaJs, color: "text-yellow-400" },
+      { name: "HTML", icon: FaHtml5, color: "#E34F26" },
+      { name: "CSS", icon: FaCss3Alt, color: "#1572B6" },
+      { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+      { name: "Python", icon: FaPython, color: "#F7DF1E" },
+      { name: "Go", icon: BiLogoGoLang, color: "#00ADD8" },
     ],
   },
   {
-    title: "Tools & Platforms",
+    title: "Frameworks & tools_ ",
     items: [
-      { name: "Git", icon: FaGitAlt, color: "text-red-700" },
-      { name: "GitHub", icon: FaGithub, color: "text-white-800" },
-      { name: "WordPress", icon: FaWordpress, color: "text-blue-800" },
+      { name: "React", icon: FaReact, color: "#61DAFB" },
+      { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "Django", icon: SiDjango, color: "#092E20" },
+      { name: "WordPress", icon: FaWordpress, color: "text-cyan-800" },
     ],
   },
   {
-    title: "Libraries & Frameworks",
+    title: "Environment & Data_",
     items: [
-      { name: "React", icon: FaReact, color: "text-cyan-500" },
-      { name: "Django", icon: SiDjango, color: "text-green-500" },
-      { name: "ViteJS", icon: SiVitess, color: "text-blue-500" },
-      { name: "Mongodb", icon: DiMongodb, color: "text-green-600" },
+      { name: "GitHub", icon: FaGithub, color: "#11111" },
+      { name: "Vite", icon: SiVite, color: "#646CFF" },
+      { name: "Git", icon: FaGitAlt, color: "#F05032" },
+      { name: "MongoDB", icon: DiMongodb, color: "#47A248" },
+      { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
     ],
   },
 ];
 
-export default function SkillsComponentList({ className }: TskillsList) {
+export default function SkillsComponentList({
+  className,
+}: {
+  className?: string;
+}) {
   return (
-    <>
-      <div
-        className={cn(
-          "grid grid-cols-1   md:grid-cols-2 lg:grid-cols-3 ",
-          className
-        )}
-      >
-        {skills.map((skill) => (
-          // title and icon wrapper
-          <div
-            className=" flex flex-col items-center justify-center gap-y-8 p-4 lg:gap-x-4  text-content  last:col-span-full  lg:last:col-auto"
-            key={skill.title}
-          >
-            <h4 className="text-lg font-semibold ">{skill.title}</h4>
+    <div className={cn("flex flex-col gap-20 w-full", className)}>
+      {skills.map((category) => (
+        <section
+          key={category.title}
+          className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start border-b border-white/5 pb-12 last:border-0"
+        >
+          {/* Section Label: Pushed to the side like a sidebar */}
+          <div className="md:col-span-4">
+            <h4 className="text-xs font-black uppercase tracking-[0.4em] text-decorator">
+              {category.title}
+            </h4>
+          </div>
 
-            {/* // skill items */}
-            <div className=" grid grid-cols-2 md:grid-flow-col-dense  w-40  md:w-60 grid-flow-row-dense   gap-y-8 items-cente justify-center   md:gap-x-4 md:gap-y-8 ">
-              {skill.items.map((item) => {
-                return <SkillsItem item={item} />;
-              })}
+          {/* Icons Grid: Breathable and structured */}
+          <div className="md:col-span-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-10 justify-items-start">
+              {category.items.map((item) => (
+                <SkillsItem key={item.name} item={item} />
+              ))}
             </div>
           </div>
-        ))}
-      </div>
-    </>
+        </section>
+      ))}
+    </div>
   );
 }

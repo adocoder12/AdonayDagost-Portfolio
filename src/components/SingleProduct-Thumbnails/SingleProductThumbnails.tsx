@@ -1,37 +1,45 @@
 import { Thumbnail } from "@/utils/types/types";
-
-type TSingleProductThumbnail = {
-  thumbnails: Thumbnail[];
-  mainThumbnail: Thumbnail;
-  onSelectThumbnail: (thumbnail: Thumbnail) => void;
-};
+import { cn } from "@/utils/cn";
 
 export default function SingleProductThumbnails({
-  thumbnails,
+  thumbnails = [],
   mainThumbnail,
   onSelectThumbnail,
-}: TSingleProductThumbnail) {
+}: {
+  thumbnails: Thumbnail[];
+  mainThumbnail: Thumbnail;
+  onSelectThumbnail: (t: Thumbnail) => void;
+}) {
   return (
-    <>
-      <div className="grid grid-cols-2 my-auto  items-center gap-4 p-4 rounded-sm  md:mx-auto  md:grid-cols-4 md:max-w-fit lg:flex lg:flex-col lg:flex-nowrap  lg:max-h-[80vh] lg:w-1/4  overflow-auto backdrop-brightness-125 ">
-        {thumbnails!.map((thumbnail, index) => (
-          <div
-            className="flex justify-center  lg:justify-center snap-start p-2 	"
-            key={index}
-          >
-            <img
-              className={`w-[160px]  max-h-48 object-cover  rounded-lg hover:scale-105  md:w-[190px]  transition-transform duration-200 ease-in-out cursor-pointer  ${
-                mainThumbnail.src === thumbnail.src
-                  ? "outline outline-[3px] outline-decorator "
-                  : "outline outline-[3px] outline-black"
-              }`}
-              src={thumbnail.src}
-              alt={thumbnail.alt}
+    <div className="flex flex-col gap-4">
+      <h4 className="text-[20px] font-black tracking-[0.4em] uppercase opacity-80 text-textColor">
+        Gallery Selection_
+      </h4>
+
+      {/* Changed to a horizontal scrollable strip or flex-wrap */}
+      <div className="flex flex-wrap gap-4">
+        {thumbnails.map((thumbnail, index) => {
+          const isActive = mainThumbnail.src === thumbnail.src;
+          return (
+            <div
+              key={index}
               onClick={() => onSelectThumbnail(thumbnail)}
-            />
-          </div>
-        ))}
+              className={cn(
+                "relative w-20 h-20 md:w-40 md:h-40 cursor-pointer overflow-hidden  transition-all duration-500",
+                isActive
+                  ? "ring-2 ring-decorator ring-offset-4 ring-offset-background opacity-100"
+                  : "grayscale hover:grayscale-0 opacity-40 hover:opacity-100 border border-white/10",
+              )}
+            >
+              <img
+                src={thumbnail.src}
+                alt={thumbnail.alt}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              />
+            </div>
+          );
+        })}
       </div>
-    </>
+    </div>
   );
 }

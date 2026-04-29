@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    // "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
       "@assets/*": ["./src/assets/*"],
@@ -33,10 +33,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "src/**/*", // Include all files under src
-    "src/global.d.ts", // Include your global type declarations
-    "src/images.d.ts " // Include your image type declarations
-  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -18,16 +18,22 @@ import ScrollToTop from "@utils/hooks/ScrollToTop";
 
 function App() {
   return (
-    <div className="app">
-      <BrowserRouter>
+    <BrowserRouter>
+      {/* ScrollToTop should be inside BrowserRouter but can stay at the top */}
+      <ScrollToTop />
+
+      <div className="app">
         <Header />
+
+        {/* Only the middle section is constrained by MainContainer */}
         <MainContainer>
-          <ScrollToTop />
           <AnimatedRoutes services={services} />
         </MainContainer>
+
+        {/* Footer is now a direct child of .app and will span 100% */}
         <Footer />
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaPhoneAlt,
+  FaRegEnvelope,
+} from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
-
-//contact icons
-import { FaPhoneAlt, FaRegEnvelope } from "react-icons/fa";
+import { cn } from "@/utils/cn";
 import NavItem from "../Header/NavItem/NavItem";
 
 export default function Footer() {
@@ -34,89 +36,102 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full p-8 bg-mainColor/20 shadow-md text-content ">
-      <div className="flex flex-col items-start justify-around gap-8 md:flex-row ">
-        {/* Footer Branding */}
-        {/* <img
-          src="https://www.js-craft.io/wp-content/uploads/2023/06/biker_cat.webp"
-          alt="logo-ct"
-          className="rounded-md w-24 h-24 md:w-32 md:h-32"
-        /> */}
-
-        <h3 className="text-xl md:text-2xl font-bold text-blue-gray-900 uppercase">
-          Adonay D'agosto
-        </h3>
-
-        {/* Navigation Links */}
-        <ul className="flex flex-col justify-start flex-wrap  gap-y-2">
-          {navLinks.map(({ name, link }) => (
-            <li key={link}>
-              <NavItem name={name} link={link} />
-            </li>
-          ))}
-        </ul>
-
-        {/* contact information */}
-        <ul className="flex flex-col justify-start flex-wrap  gap-y-6">
-          <li className="flex items-center  gap-x-2 hover:scale-105 hover:text-black">
-            <p>
-              <FaPhoneAlt size={15} />
+    <footer
+      className={cn(
+        "w-full bg-mainColor/20 text-content mt-20 border-t border-white/5",
+      )}
+    >
+      {/* Aligns content with the 1512px site grid */}
+      <div className={cn("max-w-[1512px] mx-auto px-6 md:px-[52px] py-12")}>
+        <div className="flex flex-col items-start justify-between gap-12 md:flex-row">
+          {/* Branding Section */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-xl md:text-2xl font-bold uppercase tracking-tighter text-textColor">
+              Adonay D'agosto
+            </h3>
+            <p className="text-xs md:text-sm opacity-60 max-w-[250px] leading-relaxed italic">
+              “Talk is cheap. Show me the code.” <br /> — Linus Torvalds
             </p>
-            <Link
-              rel="noopener noreferrer"
-              className=" font-normal text-md transition-colors  uppercase "
-              aria-label={"phone number"}
-              to="tel:+358400168892"
-            >
-              {"+358400168892"}
-            </Link>
-          </li>
-          <li className="flex items-center  gap-x-2 hover:scale-105 hover:text-black">
-            <p>
-              <FaRegEnvelope size={15} />
-            </p>
-            <Link
-              rel="noopener noreferrer"
-              className=" font-normal text-md transition-colors "
-              aria-label={"email address"}
-              to="mailto:adonay.jadal@gmail.com"
-            >
-              {"adonay.jadal@gmail.com"}
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <hr className="my-8 border-blue-gray-50" />
-      <div className="flex flex-col items-center  gap-y-2 md:gap-y-0   justify-around  md:flex-row ">
-        <p className="text-xs md:text-md order-1 md:order-1">
-          &copy; 2024 Kinuski Inc.
-        </p>
-        {/* Social Media Links */}
-        <div className="flex items-center gap-x-6  order-2 md:order-1">
-          {socialLinks.map(({ name, link, icon, mediaColor }) => (
-            <a
-              key={name}
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-gray-900 text-2xl transition-colors"
-              style={{
-                color: "inherit",
-                transition: "color 0.2s",
-              }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.color = mediaColor || "#997a66")
-              }
-              onMouseLeave={(e) => (e.currentTarget.style.color = "")}
-              aria-label={name}
-            >
-              {icon}
-            </a>
-          ))}
+          </div>
+
+          {/* Navigation Section */}
+          <div className="flex flex-col gap-4">
+            <h4 className="text-sm font-bold uppercase tracking-widest text-textColor">
+              Navigation
+            </h4>
+            <ul className="flex flex-col gap-y-2">
+              {navLinks.map(({ name, link }) => (
+                <li key={link}>
+                  {/* index=0 and isMobile=false prevents unwanted menu animations in footer */}
+                  <NavItem name={name} link={link} index={0} isMobile={true} />
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Section */}
+          <div className="flex flex-col gap-4">
+            <h4 className="text-sm font-bold uppercase tracking-widest text-textColor">
+              Contact
+            </h4>
+            <ul className="flex flex-col gap-y-4">
+              <li className="flex items-center gap-x-3 group cursor-pointer">
+                <FaPhoneAlt
+                  size={14}
+                  className="text-decorator transition-transform group-hover:scale-110"
+                />
+                <a
+                  href="tel:+358400168892"
+                  className="text-md font-medium hover:text-decorator transition-colors uppercase tracking-tight"
+                >
+                  +358 400 168 892
+                </a>
+              </li>
+              <li className="flex items-center gap-x-3 group cursor-pointer">
+                <FaRegEnvelope
+                  size={14}
+                  className="text-decorator transition-transform group-hover:scale-110"
+                />
+                <a
+                  href="mailto:adonay.jadal@gmail.com"
+                  className="text-md font-medium hover:text-decorator transition-colors"
+                >
+                  adonay.jadal@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <p className="text-xs md:text-md leading-loose w-full max-w-[250px] order-0 md:order-1">
-          “Talk is cheap. Show me the code.” - Linus Torvalds
-        </p>
+
+        <hr className="my-10 border-white/10" />
+
+        <div className="flex flex-col items-center gap-y-6 md:flex-row justify-between">
+          <p className="text-xs opacity-50 order-2 md:order-1">
+            &copy; 2026 Kinuski Inc. All rights reserved.
+          </p>
+
+          {/* Social Links */}
+          <div className="flex items-center gap-x-6 order-1 md:order-2">
+            {socialLinks.map(({ name, link, icon, mediaColor }) => (
+              <a
+                key={name}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-title/80 hover:scale-110 transition-all duration-300"
+                style={{ "--hover-color": mediaColor } as React.CSSProperties}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.color =
+                    mediaColor || "var(--color-decoration)")
+                }
+                onMouseLeave={(e) => (e.currentTarget.style.color = "")}
+                aria-label={name}
+              >
+                {icon}
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </footer>
   );

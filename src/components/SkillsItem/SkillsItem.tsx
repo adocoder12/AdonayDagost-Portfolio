@@ -1,4 +1,5 @@
 import { IconType } from "react-icons";
+import { cn } from "@/utils/cn";
 
 type TSkills = {
   name: string;
@@ -8,22 +9,35 @@ type TSkills = {
 
 export default function SkillsItem({ item }: { item: TSkills }) {
   const Icon = item.icon;
+
   return (
-    <>
-      <div className="flex flex-col items-center gap-y-3">
-        <button className="relative group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-700 to-black text-white font-semibold hover:translate-y-3 transition-all duration-500  hover:${item.color} ">
-          <Icon
-            key={item.name}
-            color={`${item.color}`}
-            className={` ${item.color} `}
-            title={item.name}
-            size={30}
-          />
-          <span className=" absolute opacity-0 group-hover:opacity-100 group-hover:text-white group-hover:text-sm group-hover:-translate-y-10 duration-700">
-            {item.name}
-          </span>
-        </button>
+    <div className="flex flex-col items-center group">
+      <div
+        className={cn(
+          "relative flex items-center justify-center p-5 rounded-xl transition-all duration-500 ease-in-out",
+          "bg-white/5 border border-white/10 backdrop-blur-sm",
+          "hover:border-white/20 hover:-translate-y-2 hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] hover:cursor-pointer",
+        )}
+      >
+        {/* The Icon: Using the color prop for the brand color */}
+        <Icon
+          title={item.name}
+          size={32}
+          style={{ color: item.color }}
+          className="transition-transform duration-500 group-hover:scale-110"
+        />
+
+        {/* Tooltip: Editorial Underscore Style */}
+        <span
+          className={cn(
+            "absolute -bottom-8 opacity-0 transition-all duration-500",
+            "text-[10px] font-black uppercase tracking-[0.2em] text-decorator",
+            "group-hover:opacity-100 group-hover:-bottom-10",
+          )}
+        >
+          {item.name}_
+        </span>
       </div>
-    </>
+    </div>
   );
 }

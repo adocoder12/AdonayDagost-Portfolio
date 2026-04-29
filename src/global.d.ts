@@ -27,7 +27,7 @@ declare interface NodeRequire {
   context: (
     directory: string,
     useSubdirectories: boolean,
-    regExp: RegExp
+    regExp: RegExp,
   ) => {
     keys: () => string[];
     (id: string): unknown;
@@ -35,3 +35,23 @@ declare interface NodeRequire {
 }
 
 declare const require: NodeRequire;
+// src/images.d.ts
+declare module "*.svg?react" {
+  import React from "react";
+  const ReactComponent: React.FC<
+    React.SVGProps<SVGSVGElement> & { title?: string }
+  >;
+  export default ReactComponent;
+}
+
+// Also helpful for standard image imports
+declare module "*.svg" {
+  const content: string;
+  export default content;
+}
+
+//css
+declare module "*.module.css" {
+  const classes: { [key: string]: string };
+  export default classes;
+}

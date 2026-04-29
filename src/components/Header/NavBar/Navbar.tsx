@@ -3,34 +3,35 @@ import { cn } from "@/utils/cn";
 type NavbarProps = {
   toggleMenu: boolean;
   children: React.ReactNode;
-  onclick?: () => void;
   className?: string;
 };
 
 export default function Navbar({
   toggleMenu,
   children,
-  onclick,
   className,
 }: NavbarProps) {
   return (
-    <>
-      <nav
-        onClick={onclick}
+    <nav
+      className={cn(
+        // Mobile: Starts from top-left | Desktop: Centered row or static
+        "fixed inset-0 h-screen w-full bg-background z-[55000] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
+        "flex flex-col justify-start items-start p-8 pt-32", // Mobile: Top-left alignment
+        "lg:static lg:h-auto lg:w-auto lg:bg-transparent lg:flex-row lg:justify-center lg:items-center lg:p-0 lg:translate-y-0 lg:visible",
+        toggleMenu
+          ? "translate-y-0 visible"
+          : "-translate-y-full invisible lg:visible",
+        className,
+      )}
+    >
+      <ul
         className={cn(
-          ` absolute lg:min-h-fit lg:static  min-h-[24vh] max-h-screen left-0  ${
-            toggleMenu
-              ? "top-[100%] h-screen transition-all "
-              : "  top-[-300%] "
-          } z-[2]
-          }] lg:w-auto items-center justify-between  duration-300 px-5 w-full bg-slate-100`,
-          className
+          "flex flex-col list-none uppercase gap-y-10", // Mobile: Vertical stack
+          "lg:flex-row lg:items-center lg:gap-x-10 lg:gap-y-0", // Desktop: Horizontal row
         )}
       >
-        <ul className="flex  flex-col  lg:flex-row md:gap-8 gap-y-4   list-none uppercase bg-inherit">
-          {children}
-        </ul>
-      </nav>
-    </>
+        {children}
+      </ul>
+    </nav>
   );
 }

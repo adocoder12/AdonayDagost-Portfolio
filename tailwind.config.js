@@ -30,9 +30,11 @@ export default {
       },
       colors: {
         transparent: "transparent",
+        background: "#e8edf2",
         mainColor: "#3c6381",
+        textColor: "#111111",
         title: "#f4f9fc",
-        content: "#f4f9fc",
+        content: "#111111",
         decorator: "#997a66",
       },
       backgroundImage: {

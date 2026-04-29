@@ -1,21 +1,20 @@
 import { Thumbnail } from "@/utils/types/types";
-
-type TSingleProductThumbnail = {
-  thumbnail: Thumbnail;
-};
+import { cn } from "@/utils/cn";
 
 export default function SingleProductThumbnail({
   thumbnail,
-}: TSingleProductThumbnail) {
+}: {
+  thumbnail: Thumbnail;
+}) {
   return (
-    <>
-      <div className="flex items-center mx-auto p-2 lg:p-4 w-full aspect-video overflow-hidden">
-        <img
-          src={thumbnail.src}
-          alt={thumbnail.alt}
-          className="w-full h-auto  rounded object-cover"
-        />
-      </div>
-    </>
+    <div className={cn("relative w-full overflow-hidden bg-transparent")}>
+      <img
+        src={thumbnail.src}
+        alt={thumbnail.alt}
+        /* Changed h-full to h-auto and removed aspect-video to show full image */
+        className="w-full h-auto block object-contain "
+        loading="eager"
+      />
+    </div>
   );
 }
