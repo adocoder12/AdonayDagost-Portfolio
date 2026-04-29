@@ -3,24 +3,24 @@ import { THero } from "@/utils/types/types";
 import Button from "../button/Button";
 import profilePic from "@/assets/img/profile.jpeg";
 
-// Ensure the filename matches exactly (e.g., hero.module.css)
+// 1. Import the styles object
 import stylesObject from "./hero.module.css";
+
+// 2. Cast to Record<string, string> to satisfy TS18046 (type 'unknown')
 const styles = stylesObject as Record<string, string>;
 
 export default function Hero({ links, className }: THero) {
   return (
-    <section className={cn(stylesObject["hero-section-block"], className)}>
-      {/* 1. Background Mask Layer (Gradient) */}
+    // FIX: Use 'styles' (the casted variable) instead of 'stylesObject'
+    <section className={cn(styles["hero-section-block"], className)}>
       <div className={styles.mask} />
 
-      {/* 2. Background Visual (The profile image) */}
       <img
         src={profilePic}
         alt="Background Visual"
         className={styles["background-visual"]}
       />
 
-      {/* 3. Content Container (Centered 1200px) */}
       <div className={styles["content-hero"]}>
         <div className={styles["text-hero-container"]}>
           <h2 className="text-md font-medium tracking-wider uppercase">
@@ -36,7 +36,6 @@ export default function Hero({ links, className }: THero) {
             focus on clean code and creative design.
           </p>
 
-          {/* 4. Button Wrapper */}
           <div className={styles["hero-btn-wrapper"]}>
             {links &&
               links.length > 0 &&
@@ -48,7 +47,6 @@ export default function Hero({ links, className }: THero) {
           </div>
         </div>
 
-        {/* 5. Floating Decorative Initials (Uses global utility classes) */}
         <div className="absolute hidden xl:block bottom-16 right-12 pointer-events-none select-none">
           <span className="text-[10rem] font-black opacity-10 text-textColor">
             A.D
