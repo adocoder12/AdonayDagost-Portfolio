@@ -3,14 +3,12 @@ import { THero } from "@/utils/types/types";
 import Button from "../button/Button";
 import profilePic from "@/assets/img/profile.jpeg";
 
-// 1. Import the styles object
 import "./hero.css";
 
 // 2. Cast to Record<string, string> to satisfy TS18046 (type 'unknown')
 
 export default function Hero({ links, className }: THero) {
   return (
-    // FIX: Use 'styles' (the casted variable) instead of 'stylesObject'
     <section className={cn("hero-section-block", className)}>
       <div className={"mask"} />
 
