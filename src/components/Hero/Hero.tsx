@@ -5,12 +5,10 @@ import profilePic from "@/assets/img/profile.jpeg";
 
 import "./hero.css";
 
-// 2. Cast to Record<string, string> to satisfy TS18046 (type 'unknown')
-
 export default function Hero({ links, className }: THero) {
   return (
     <section className={cn("hero-section-block", className)}>
-      <div className={"mask"} />
+      <div className="mask" />
 
       <img
         src={profilePic}
@@ -18,8 +16,8 @@ export default function Hero({ links, className }: THero) {
         className={"background-visual"}
       />
 
-      <div className={"content-hero"}>
-        <div className={"text-hero-container"}>
+      <div className="content-hero">
+        <div className="text-hero-container">
           <h2 className="text-md font-medium tracking-wider uppercase">
             Hi ✋🏾, here is Ado.
           </h2>
@@ -33,7 +31,7 @@ export default function Hero({ links, className }: THero) {
             focus on clean code and creative design.
           </p>
 
-          <div className={"hero-btn-wrapper"}>
+          <div className="hero-btn-wrapper">
             {links &&
               links.length > 0 &&
               links.map((link, idx) => (
