@@ -4,11 +4,12 @@ import Button from "../button/Button";
 import profilePic from "@/assets/img/profile.jpeg";
 
 // Ensure the filename matches exactly (e.g., hero.module.css)
-import styles from "./hero.module.css";
+import stylesObject from "./hero.module.css";
+const styles = stylesObject as Record<string, string>;
 
 export default function Hero({ links, className }: THero) {
   return (
-    <section className={cn(styles["hero-section-block"], className)}>
+    <section className={cn(stylesObject["hero-section-block"], className)}>
       {/* 1. Background Mask Layer (Gradient) */}
       <div className={styles.mask} />
 
