@@ -1,6 +1,20 @@
 {
   "compilerOptions": {
-    // "baseUrl": "./",
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode - Crucial for Vite 8 */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Paths */
     "paths": {
       "@/*": ["./src/*"],
       "@assets/*": ["./src/assets/*"],
@@ -9,23 +23,9 @@
       "@redux/*": ["./src/redux/*"],
       "@utils/*": ["./src/utils/*"]
     },
-    "types": [
-      "node",
-      "webpack-env" // for webpack
-    ],
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
+    /* Types - Use Vite's native types instead of Webpack */
+    "types": ["vite/client", "vite-plugin-svgr/client", "node"],
 
     /* Linting */
     "strict": true,
@@ -33,6 +33,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

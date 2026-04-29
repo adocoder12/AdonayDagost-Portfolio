@@ -50,7 +50,13 @@ declare module "*.svg" {
   export default content;
 }
 
-//css
+// Standard CSS side-effect imports (fixes TS2882)
+declare module "*.css" {
+  const content: unknown;
+  export default content;
+}
+
+// Keep your existing CSS Module declaration
 declare module "*.module.css" {
   const classes: { [key: string]: string };
   export default classes;
