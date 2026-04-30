@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import BurgerIcon from "@/assets/icons/BurgerIcon";
-import CloseIcon from "@/assets/icons/CloseIcon";
+import BurgerIcon from "@/components/UI/icons/BurgerIcon";
+import CloseIcon from "@/components/UI/icons/CloseIcon";
 import Navbar from "./NavBar/Navbar";
 import NavItem from "./NavItem/NavItem";
 import { cn } from "@/utils/cn";
