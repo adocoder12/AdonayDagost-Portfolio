@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import BurgerIcon from "@/assets/icons/burguer_menu.svg?react";
-import CloseIcon from "@/assets/icons/burguerCloseMenu.svg?react";
+import BurgerIcon from "@/assets/icons/BurgerIcon";
+import CloseIcon from "@/assets/icons/CloseIcon";
 import Navbar from "./NavBar/Navbar";
 import NavItem from "./NavItem/NavItem";
 import { cn } from "@/utils/cn";
@@ -65,9 +65,9 @@ export default function Header() {
             aria-label="Toggle Menu"
           >
             {!toggleMenu ? (
-              <BurgerIcon className="w-[30px] h-[30px] text-textColor [&_path]:stroke-current" />
+              <BurgerIcon className="w-[30px] h-[30px] text-textColor [" />
             ) : (
-              <CloseIcon className="w-[30px] h-[30px] text-textColor [&_path]:stroke-current" />
+              <CloseIcon className="w-[30px] h-[30px] text-textColor " />
             )}
           </button>
         </div>
