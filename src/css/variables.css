@@ -3,13 +3,13 @@
   --text: #111111;
   --color-muted: #a0a0a0; /* Placeholders, sad, inactive states */
   --decorator: #997a66;
-  
+
   /* ⚙️ Functional Colors */
   --color-success: #28a745; /* Success */
   --color-error: #dc3545; /* Error */
   --color-warning: #ffc107; /* Warning */
   --color-info: #17a2b8; /* Info */
-  
+
   /* ⚪ Neutral Palette */
   --color-dark: #000000; /* Absolute black */
   --color-light: #f7f7f7; /* Light background surfaces */
@@ -20,20 +20,17 @@
   --color-white02: #f7f7f7;
   --color-white03: #e8e8e8;
 
-  //fonts
+  /* FONTS */
   --font-mono: "Courier Prime";
 
-
-    --font-weight-light: 300;
+  --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --font-weight-extrabold:800 ;
+  --font-weight-extrabold: 800;
 
-
-
-    /*=========================================================
+  /*=========================================================
         Heading Font Sizes
     ==========================================================*/
   /*
@@ -42,7 +39,7 @@
     MAX: 80px (5rem)
     Line-height: 84px
   */
-  
+
   --fs-h1: 54px;
   --lh-h1: 1.05;
 
@@ -63,7 +60,6 @@
   */
   --fs-h3: 24px;
   --lh-h3: 1.2;
-
 
   /*
     Smaller headings, widget titles, card titles
@@ -117,5 +113,4 @@
   /* Line Heights (vertical rhythm) */
   /*--line-height-body: 1.2;*/
   --fs-somep: 16px;
-
 }
