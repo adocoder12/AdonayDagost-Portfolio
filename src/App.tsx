@@ -19,7 +19,6 @@ import ScrollToTop from "@utils/hooks/ScrollToTop";
 function App() {
   return (
     <BrowserRouter>
-      {/* ScrollToTop should be inside BrowserRouter but can stay at the top */}
       <ScrollToTop />
 
       <div className="app">
