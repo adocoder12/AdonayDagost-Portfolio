@@ -43,9 +43,9 @@ export default function HomePage({ services }: { services: TServices[] }) {
       <div className="container-sized">
         {/* Editorial Introduction */}
         <section className="flex flex-col items-center justify-center text-center py-20 gap-y-10">
-          <h2 className="leading-relaxed text-black-02   md:leading-snug lg:leading-tight font-light text-content max-w-5xl italic">
+          <h2 className=" text-h5 md:text-h4 lg:text-h2 leading-relaxed text-black-02   md:leading-snug lg:leading-tight font-light text-content max-w-5xl italic">
             "My passion for creativity and problem-solving led me to explore
-            frontend development. The moment I crafted my first webpage, I was
+            frontend deve lopment. The moment I crafted my first webpage, I was
             <span className="text-decorator font-bold"> captivated</span> by the
             power to transform ideas into interactive digital experiences."
           </h2>
