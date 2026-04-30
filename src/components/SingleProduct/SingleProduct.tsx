@@ -59,7 +59,7 @@ export default function SingleProduct({
         </h5>
       </div>
 
-      {/* Archive Navigation */}
+      {/* Projects Navigation */}
       <div className="mt-20 pt-10 border-t border-white/10">
         <button
           onClick={() => window.history.back()}
@@ -68,7 +68,7 @@ export default function SingleProduct({
           <span className="group-hover:-translate-x-2 transition-transform duration-300">
             ←
           </span>
-          Return to Archive
+          Return to Projects
         </button>
       </div>
     </section>
