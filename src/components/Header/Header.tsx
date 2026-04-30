@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import BurgerIcon from "@/assets/icons/burguer_menu.svg?react";
+import BurgerIcon from "../assets/icons/burguer_menu.svg?react";
 import CloseIcon from "@/assets/icons/burguerCloseMenu.svg?react";
 import Navbar from "./NavBar/Navbar";
 import NavItem from "./NavItem/NavItem";
