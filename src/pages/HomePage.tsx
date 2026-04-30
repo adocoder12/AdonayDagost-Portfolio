@@ -52,7 +52,7 @@ export default function HomePage({ services }: { services: TServices[] }) {
         </section>
 
         {/* Gallery Section */}
-        <section className="flex flex-col py-20 gap-y-12 border-t border-white/5">
+        <section className="flex flex-col pt-20 gap-y-12 border-t border-white/5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
             <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-black-02 leading-[0.85]">
               Mastering <br /> the Craft_
