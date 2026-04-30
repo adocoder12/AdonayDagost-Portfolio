@@ -36,9 +36,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer
-      className={cn("w-full bg-decorator/20  mt-2 border-t border-white/5")}
-    >
+    <footer className={cn("w-full bg-inherit  mt-2 border-t border-white/5")}>
       {/* Aligns content with the 1512px site grid */}
       <div className={cn("max-w-[1512px] mx-auto px-6 md:px-[52px] py-12")}>
         <div className="flex flex-col items-start justify-between gap-12 md:flex-row">

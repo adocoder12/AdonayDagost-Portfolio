@@ -23,7 +23,7 @@ export default function Hero({ links, className }: THero) {
           </h2>
 
           <h1 className="uppercase font-bold text-black-02 leading-tight">
-            A Frontend Developer.
+            A Software Developer.
           </h1>
 
           <h5 className=" font-light text-black-02 leading-relaxed max-w-2xl">

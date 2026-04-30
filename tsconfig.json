@@ -4,12 +4,9 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "skipLibCheck": true,
-
-    /* 
-       1. REMOVE baseUrl 
-       2. Use 'bundler' resolution for Vite 8 
-    */
     "moduleResolution": "bundler",
+    /* baseUrl REMOVED */
+
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -17,7 +14,7 @@
     "jsx": "react-jsx",
     "strict": true,
 
-    /* Define explicit aliases starting from the root */
+    /* Use relative paths directly in the mapping */
     "paths": {
       "@/*": ["./src/*"],
       "@assets/*": ["./src/assets/*"],
@@ -25,11 +22,6 @@
       "@utils/*": ["./src/utils/*"]
     }
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.d.ts",
-    "src/vite-env.d.ts"
-  ],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

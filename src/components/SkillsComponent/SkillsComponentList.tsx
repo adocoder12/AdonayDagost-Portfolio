@@ -74,7 +74,7 @@ export default function SkillsComponentList({
           </div>
 
           {/* Icons Grid: Balanced spacing for the stretched container */}
-          <div className="grid grid-cols-2 sm:grid-cols-3  gap-x-8 gap-y-16">
+          <div className="grid grid-cols-2 sm:grid-cols-3  gap-x-4 gap-y-12 justify-items-center">
             {category.items.map((item) => (
               <div
                 key={item.name}

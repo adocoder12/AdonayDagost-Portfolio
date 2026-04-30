@@ -1,16 +1,20 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import tsconfigPaths from "vite-tsconfig-paths";
 import svgr from "vite-plugin-svgr";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [
+    svgr({
+      // preventing conflicts with standard SVG image imports
+      include: "**/*.svg?react",
+    }),
     react(),
-    tsconfigPaths(),
-    svgr(),
-    tailwindcss(), // Integrated Tailwind v4 plugin
+    tailwindcss(),
   ],
-  // Adjust base if deploying to GitHub Pages sub-folder
+  resolve: {
+    // This replaces the vite-tsconfig-paths plugin
+    tsconfigPaths: true,
+  },
   base: "/",
 });
