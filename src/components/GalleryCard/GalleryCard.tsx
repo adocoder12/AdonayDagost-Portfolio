@@ -52,7 +52,7 @@ export default function GalleryCard({ service, className }: GalleryCardProps) {
 
         {/* Keeping the 'Archive' text as the only subtle hover indicator */}
         <div className="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <span>View Archive_</span>
+          <span>View Project</span>
           <span className="text-decorator">→</span>
         </div>
       </div>

@@ -57,7 +57,7 @@ export default function HomePage({ services }: { services: TServices[] }) {
             <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-black-02 leading-[0.85]">
               Mastering <br /> the Craft_
             </h2>
-            <h5 className="font-light  leading-relaxed text-justify opacity-80">
+            <h5 className="font-light  leading-normal text-justify opacity-80">
               Innovation, creativity, and passion converge in the projects I’ve
               worked on. Each piece reflects a commitment and love for problem
               solving representing a unique challenge tackled with technical
