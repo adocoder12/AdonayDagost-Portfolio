@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+/* 1. Standard CSS Variables (Visible to the browser) */
+
+@import "./variables.css";
+
+/* 2. Tailwind Theme (Tells Tailwind how to make classes like bg-background) */
+@theme {
+  /* Colors */
+  --color-background: var(--background);
+  --color-text: var(--text);
+  --color-muted: var(--color-muted);
+  --color-decorator: var(--decorator);
+
+  /* Functional Colors */
+  --color-success: var(--color-success);
+  --color-error: var(--color-error);
+  --color-warning: var(--color-warning);
+  --color-info: var(--color-info);
+
+  /* Neutrals */
+  --color-dark: var(--color-dark);
+  --color-light: var(--color-light);
+  --color-black: var(--color-black);
+  --color-black-02: var(--color-black02);
+  --color-black-03: var(--color-black03);
+  --color-white: var(--color-white);
+  --color-white-02: var(--color-white02);
+  --color-white-03: var(--color-white03);
+
+  /* Typography */
+  --font-mono: var(--font-mono);
+
+  --font-weight-light: var(--font-weight-light);
+  --font-weight-regular: var(--font-weight-regular);
+  --font-weight-medium: var(--font-weight-medium);
+  --font-weight-semibold: var(--font-weight-semibold);
+  --font-weight-bold: var(--font-weight-bold);
+  --font-weight-extrabold: var(--font-weight-extrabold);
+
+  /* Custom Font Size Scale */
+  --text-h1: var(--fs-h1);
+  --text-h1--line-height: var(--lh-h1);
+
+  --text-h2: var(--fs-h2);
+  --text-h2--line-height: var(--lh-h2);
+
+  --text-h3: var(--fs-h3);
+  --text-h3--line-height: var(--lh-h3);
+
+  --text-h4: var(--fs-h4);
+  --text-h4--line-height: var(--lh-h4);
+
+  --text-h5: var(--fs-h5);
+  --text-h5--line-height: var(--lh-h5);
+
+  --text-h6: var(--fs-h6);
+  --text-h6--line-height: var(--lh-h6);
+
+  --text-body: var(--fs-body);
+  --text-body--line-height: var(--lh-body);
+
+  --text-small: var(--fs-small);
+  --text-small--line-height: var(--lh-small);
+}
+
+/* 3. Base Resets */
+@layer base {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+    background-color: var(--background);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  body {
+    @apply min-h-screen antialiased;
+    min-width: 320px;
+    color: var(--text);
+    font-family: var(--font-mono);
+  }
+
+  /* ==========================================
+   Headings
+  ========================================== */
+
+  /* Automatic Heading Styles */
+  h1 {
+    @apply text-h1 font-extrabold;
+  }
+  h2 {
+    @apply text-h2 font-bold;
+  }
+  h3 {
+    @apply text-h3 font-bold;
+  }
+  h4 {
+    @apply text-h4 font-bold;
+  }
+  h5 {
+    @apply text-h5 font-bold;
+  }
+  h6 {
+    @apply text-h6 font-bold;
+  }
+
+  /* ==========================================
+   Paragraphs
+========================================== */
+  p {
+    @apply text-body font-light;
+    color: var(--text);
+    hyphens: auto;
+    word-break: normal;
+  }
+}
+
+/* 4. Layout Components */
+@layer components {
+  .app {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .main-container {
+    display: grid;
+    padding-top: 80px;
+    width: 100%;
+    max-width: 1512px;
+    margin: 0 auto;
+    padding-inline: 52px;
+
+    @media (max-width: 768px) {
+      padding-top: 80px;
+      padding-inline: 20px;
+    }
+  }
+
+  .container-sized {
+    display: block;
+    width: 100%;
+    padding-inline: 52px;
+
+    @media (max-width: 992px) {
+      padding-inline: 32px;
+    }
+    @media (max-width: 768px) {
+      padding-inline: 16px;
+    }
+    @media (max-width: 528px) {
+      padding-inline: 12px;
+    }
+  }
+}
+
+/* 5. Custom Scrollbar */
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--decorator);
+    border-radius: 5px;
+  }
+}

@@ -21,10 +21,10 @@ export default function SingleProduct({
   const mainThumbnail = useMemo(() => selectedThumbnail, [selectedThumbnail]);
 
   return (
-    <section className={cn("flex flex-col min-h-screen text-content pb-24")}>
+    <section className={cn("flex flex-col min-h-screen text-black-02 pb-24")}>
       {/* Editorial Header */}
       <div className="mt-8 flex items-center gap-4">
-        <div className="h-[2px] w-12 bg-decorator" />
+        <div className="h-0.5 w-12 bg-decorator" />
         <span className="text-xs font-bold tracking-[0.4em] uppercase opacity-60">
           Case Study_
         </span>
@@ -54,9 +54,9 @@ export default function SingleProduct({
 
       {/* Narrative Section */}
       <div className="mt-16 max-w-4xl">
-        <p className="text-xl md:text-2xl font-light leading-relaxed text-justify md:text-left opacity-90 first-letter:text-4xl first-letter:font-bold first-letter:mr-1">
+        <h5 className=" font-light text-black-03 leading-relaxed text-justify md:text-left  first-letter:text-3xl first-letter:font-bold first-letter:mr-0.5">
           {description}
-        </p>
+        </h5>
       </div>
 
       {/* Archive Navigation */}

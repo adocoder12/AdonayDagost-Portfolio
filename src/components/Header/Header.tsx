@@ -7,6 +7,7 @@ import NavItem from "./NavItem/NavItem";
 import { cn } from "@/utils/cn";
 
 const navLinks = [
+  { name: "Home", link: "/" },
   { name: "Archives", link: "/projects" },
   { name: "About Me", link: "/about-me" },
 ];
@@ -34,7 +35,7 @@ export default function Header() {
         <div className="flex items-center">
           <Link
             to="/"
-            className="text-2xl font-bold uppercase tracking-tight text-textColor z-[99999]"
+            className="text-2xl font-bold uppercase tracking-tight text-colorText z-[99999]"
           >
             Adonay D'Agosto
           </Link>

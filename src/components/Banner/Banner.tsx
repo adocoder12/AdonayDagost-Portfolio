@@ -22,7 +22,7 @@ export default function Banner({
         className={`flex flex-col justify-center items-center gap-y-8 p-6 shadow-lg h-[30vh] md:h-[42vh] bg-cover bg-center w-full`}
         style={{ backgroundImage: `url(${CoverImg_banner || coverImg})` }}
       >
-        <h1 className="text-lg lg:text-5xl absolute  text-title uppercase font-medium backdrop-brightness-50">
+        <h1 className=" lg:text-5xl absolute  text-black-02 uppercase font-medium backdrop-brightness-50">
           {title + "_"}
         </h1>
         <div className=" flex gap-x-6">
@@ -30,7 +30,7 @@ export default function Banner({
             links.length > 0 &&
             links.map((link, idx) => (
               <Button
-                className="last:bg-white  last:hover:bg-inherit last:hover:text-slate-100 "
+                className="last:bg-white-03  last:hover:bg-inherit last:hover:text-white-02 "
                 key={idx}
                 btnHerf={link.href}
               >

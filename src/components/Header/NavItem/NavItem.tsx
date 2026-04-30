@@ -22,7 +22,7 @@ export default function NavItem({
       onClick={() => setToggleMenu?.(false)}
       className={({ isActive }) =>
         cn(
-          "relative group md:text-xl lg:text-lg font-medium transition-all duration-500 block ",
+          "relative group text-body font-medium transition-all duration-500 block ",
           isActive ? "text-decorator" : "text-textColor",
           // Mobile staggered animation logic
           isMobile

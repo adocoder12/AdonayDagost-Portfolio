@@ -1,47 +1,58 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-
+module.exports = {
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        Courier: ["Courier Prime", "monospace", "sans-serif"],
-      },
-      keyframes: {
-        jump7456: {
-          "15%": { "border-bottom-right-radius": "3px" },
-          "25%": { transform: "translateY(9px) rotate(22.5deg)" },
-          "50%": {
-            transform: "translateY(18px) scale(1, .9) rotate(45deg)",
-            "border-bottom-right-radius": "40px",
-          },
-          "75%": { transform: "translateY(9px) rotate(67.5deg)" },
-          "100%": { transform: "translateY(0) rotate(90deg)" },
-        },
-        shadow324: {
-          "0%": { transform: "scale(1, 1)" },
-          "50%": { transform: "scale(1.2, 1)" },
-          "100%": { transform: "scale(1, 1)" },
-        },
-      },
-      animation: {
-        jump7456: "jump7456 0.5s linear infinite",
-        shadow324: "shadow324 0.5s linear infinite",
-      },
       colors: {
-        transparent: "transparent",
-        background: "#e8edf2",
-        mainColor: "#3c6381",
-        textColor: "#111111",
-        title: "#f4f9fc",
-        content: "#111111",
-        decorator: "#997a66",
+        background: "var(--background)",
+        colorText: "var(--text)",
+        muted: "var(--color-muted)",
+        decorator: "var(--decorator)",
+
+        // Functional Colors
+        success: "var(--color-success)",
+        error: "var(--color-error)",
+        warning: "var(--color-warning)",
+        info: "var(--color-info)",
+
+        // Neutral Palette
+        dark: "var(--color-dark)",
+        light: "var(--color-light)",
+        black: {
+          DEFAULT: "var(--color-black)",
+          "02": "var(--color-black02)",
+          "03": "var(--color-black03)",
+        },
+        white: {
+          DEFAULT: "var(--color-white)",
+          "02": "var(--color-white02)",
+          "03": "var(--color-white03)",
+        },
       },
-      backgroundImage: {
-        "banner-img-about": "url('/src/assets/img/AboutCover_pic.jpg')", // Adjust the path to your image
+      fontFamily: {
+        mono: ["var(--font-mono)", "monospace"],
+      },
+      fontWeight: {
+        light: "var(--font-weight-light)",
+        regular: "var(--font-weight-regular)",
+        medium: "var(--font-weight-medium)",
+        semibold: "var(--font-weight-semibold)",
+        bold: "var(--font-weight-bold)",
+        extrabold: "var(--font-weight-extrabold)",
+      },
+      fontSize: {
+        // [fontSize, lineHeight]
+        h1: ["var(--fs-h1)", "var(--lh-h1)"],
+        h2: ["var(--fs-h2)", "var(--lh-h2)"],
+        h3: ["var(--fs-h3)", "var(--lh-h3)"],
+        h4: ["var(--fs-h4)", "var(--lh-h4)"],
+        h5: ["var(--fs-h5)", "var(--lh-h5)"],
+        h6: ["var(--fs-h6)", "var(--lh-h6)"],
+        body: ["var(--fs-body)", "var(--lh-body)"],
+        small: ["var(--fs-small)", "var(--lh-small)"],
+        somep: ["var(--fs-somep)", "1.2"], // Fallback line-height as requested
       },
     },
   },
-  // eslint-disable-next-line no-undef
-  plugins: [require("tailwindcss-animated")],
+  plugins: [],
 };

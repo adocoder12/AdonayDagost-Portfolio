@@ -1,10 +1,9 @@
 /// <reference types="vite/client" />
 /// <reference types="vite-plugin-svgr/client" />
 
-declare module "*.css" {
-  const content: string;
-  export default content;
-}
+declare module "*.css";
+declare module "*.scss";
+declare module "*.sass";
 
 declare module "*.jpg" {
   const src: string;

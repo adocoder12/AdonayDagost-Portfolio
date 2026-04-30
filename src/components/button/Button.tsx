@@ -43,7 +43,7 @@ export default function Button({
         type={type}
         {...attributes}
         className={cn(
-          " flex items-center space-x-2 p-[15px] w-full  underline underline-offset-2 rounded-md text-sm font-bold z-10 text-textColor bg-transparent capitalize active:scale-95 group-hover:scale-[1.02] hover:cursor-pointer  ",
+          " flex items-center space-x-2 p-3.75 w-full  underline underline-offset-2 rounded-md text-sm font-bold z-10 text-black bg-transparent capitalize active:scale-95 group-hover:scale-[1.02] hover:cursor-pointer  ",
         )}
         onClick={handleClick}
       >

@@ -22,14 +22,14 @@ export default function Hero({ links, className }: THero) {
             Hi ✋🏾, here is Ado.
           </h2>
 
-          <h1 className="uppercase font-bold leading-tight">
+          <h1 className="uppercase font-bold text-black-02 leading-tight">
             A Frontend Developer.
           </h1>
 
-          <p className="text-lg opacity-90">
+          <h5 className=" font-light text-black-02 leading-relaxed max-w-2xl">
             Building high-performance, interactive digital experiences with a
             focus on clean code and creative design.
-          </p>
+          </h5>
 
           <div className="hero-btn-wrapper">
             {links &&
@@ -43,7 +43,7 @@ export default function Hero({ links, className }: THero) {
         </div>
 
         <div className="absolute hidden xl:block bottom-16 right-12 pointer-events-none select-none">
-          <span className="text-[10rem] font-black opacity-10 text-textColor">
+          <span className="text-[10rem] font-black opacity-20 text-black-02">
             A.D
           </span>
         </div>

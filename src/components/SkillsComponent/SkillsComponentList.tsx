@@ -48,7 +48,7 @@ const skills = [
       { name: "Vite", icon: SiVite, color: "#646CFF" },
       { name: "Git", icon: FaGitAlt, color: "#F05032" },
       { name: "MongoDB", icon: DiMongodb, color: "#47A248" },
-      { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
+      { name: "Postgress", icon: SiPostgresql, color: "#4169E1" },
     ],
   },
 ];
@@ -59,26 +59,32 @@ export default function SkillsComponentList({
   className?: string;
 }) {
   return (
-    <div className={cn("flex flex-col gap-20 w-full", className)}>
+    <div className={cn("flex flex-col gap-24 w-full", className)}>
       {skills.map((category) => (
         <section
           key={category.title}
-          className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start border-b border-white/5 pb-12 last:border-0"
+          /* items-stretch ensures the border-b spans the full container width */
+          className="flex flex-col items-stretch border-b border-white/10 pb-16 last:border-0"
         >
-          {/* Section Label: Pushed to the side like a sidebar */}
-          <div className="md:col-span-4">
-            <h4 className="text-xs font-black uppercase tracking-[0.4em] text-decorator">
+          {/* Category Title: Left-aligned looks more high-end with items-stretch */}
+          <div className="mb-10">
+            <h3 className="text-small font-bold uppercase tracking-[0.3em] text-decorator/90">
               {category.title}
-            </h4>
+            </h3>
           </div>
 
-          {/* Icons Grid: Breathable and structured */}
-          <div className="md:col-span-8">
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-10 justify-items-start">
-              {category.items.map((item) => (
-                <SkillsItem key={item.name} item={item} />
-              ))}
-            </div>
+          {/* Icons Grid: Balanced spacing for the stretched container */}
+          <div className="grid grid-cols-2 sm:grid-cols-3  gap-x-8 gap-y-16">
+            {category.items.map((item) => (
+              <div
+                key={item.name}
+                className="flex flex-col items-center justify-center group"
+              >
+                <div className="transition-transform duration-300 group-hover:scale-110">
+                  <SkillsItem item={item} />
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       ))}

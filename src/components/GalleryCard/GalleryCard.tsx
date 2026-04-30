@@ -22,12 +22,7 @@ export default function GalleryCard({ service, className }: GalleryCardProps) {
         className,
       )}
     >
-      {/* 
-          Flexible Image Container 
-          Removed 'aspect-square' so the height isn't forced.
-          Added 'max-h-[400px]' (adjust as needed) to keep grid items uniform.
-      */}
-      <div className="w-full max-h-[450px] overflow-hidden bg-white/5 rounded-sm border border-white/5 flex items-center justify-center">
+      <div className="w-full max-h-[450px] overflow-hidden bg-white/5 rounded-[5px] border border-white/5 flex items-center justify-center">
         <img
           alt={service.thumbnail.alt}
           src={service.thumbnail.src}
@@ -42,15 +37,15 @@ export default function GalleryCard({ service, className }: GalleryCardProps) {
       {/* Description Section */}
       <div className="flex flex-col pt-6 px-1">
         <div className="text-start">
-          <h2 className="text-xl md:text-3xl font-black uppercase tracking-tighter text-content leading-tight mb-1">
+          <h3 className=" font-black uppercase text-black-02 tracking-tighter text-content leading-tight mb-1">
             {service.title}_
-          </h2>
+          </h3>
 
           <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-decorator mb-4">
             {service.subtitle}
           </p>
 
-          <p className="text-content text-sm md:text-base font-light leading-relaxed line-clamp-3 opacity-70">
+          <p className="text-black-03 font-light leading-relaxed line-clamp-3 opacity-70">
             {service.description}
           </p>
         </div>

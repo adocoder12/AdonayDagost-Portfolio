@@ -37,28 +37,26 @@ export default function Footer() {
 
   return (
     <footer
-      className={cn(
-        "w-full bg-mainColor/20 text-content mt-20 border-t border-white/5",
-      )}
+      className={cn("w-full bg-decorator/20  mt-2 border-t border-white/5")}
     >
       {/* Aligns content with the 1512px site grid */}
       <div className={cn("max-w-[1512px] mx-auto px-6 md:px-[52px] py-12")}>
         <div className="flex flex-col items-start justify-between gap-12 md:flex-row">
           {/* Branding Section */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-xl md:text-2xl font-bold uppercase tracking-tighter text-textColor">
+            <h3 className=" text-black-02 font-bold uppercase tracking-tighter ">
               Adonay D'agosto
             </h3>
-            <p className="text-xs md:text-sm opacity-60 max-w-[250px] leading-relaxed italic">
+            <p className=" text-small  max-w-[250px] text-black-02/60  leading-relaxed italic">
               “Talk is cheap. Show me the code.” <br /> — Linus Torvalds
             </p>
           </div>
 
           {/* Navigation Section */}
           <div className="flex flex-col gap-4">
-            <h4 className="text-sm font-bold uppercase tracking-widest text-textColor">
+            <h6 className="font-bold uppercase tracking-widest text-black">
               Navigation
-            </h4>
+            </h6>
             <ul className="flex flex-col gap-y-2">
               {navLinks.map(({ name, link }) => (
                 <li key={link}>
@@ -71,9 +69,9 @@ export default function Footer() {
 
           {/* Contact Section */}
           <div className="flex flex-col gap-4">
-            <h4 className="text-sm font-bold uppercase tracking-widest text-textColor">
+            <h6 className="font-bold uppercase tracking-widest text-black">
               Contact
-            </h4>
+            </h6>
             <ul className="flex flex-col gap-y-4">
               <li className="flex items-center gap-x-3 group cursor-pointer">
                 <FaPhoneAlt
@@ -82,7 +80,7 @@ export default function Footer() {
                 />
                 <a
                   href="tel:+358400168892"
-                  className="text-md font-medium hover:text-decorator transition-colors uppercase tracking-tight"
+                  className="text-body font-medium hover:text-decorator transition-colors uppercase tracking-tight"
                 >
                   +358 400 168 892
                 </a>
@@ -94,7 +92,7 @@ export default function Footer() {
                 />
                 <a
                   href="mailto:adonay.jadal@gmail.com"
-                  className="text-md font-medium hover:text-decorator transition-colors"
+                  className="text-body font-medium hover:text-decorator transition-colors"
                 >
                   adonay.jadal@gmail.com
                 </a>
@@ -106,7 +104,7 @@ export default function Footer() {
         <hr className="my-10 border-white/10" />
 
         <div className="flex flex-col items-center gap-y-6 md:flex-row justify-between">
-          <p className="text-xs opacity-50 order-2 md:order-1">
+          <p className="text-small text-black/50 order-2 md:order-1">
             &copy; 2026 Kinuski Inc. All rights reserved.
           </p>
 
@@ -118,7 +116,7 @@ export default function Footer() {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-title/80 hover:scale-110 transition-all duration-300"
+                className="text-black-02/80 hover:scale-110 transition-all duration-300"
                 style={{ "--hover-color": mediaColor } as React.CSSProperties}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.color =

@@ -1,0 +1,121 @@
+:root {
+  --background: #e8edf2;
+  --text: #111111;
+  --color-muted: #a0a0a0; /* Placeholders, sad, inactive states */
+  --decorator: #997a66;
+  
+  /* ⚙️ Functional Colors */
+  --color-success: #28a745; /* Success */
+  --color-error: #dc3545; /* Error */
+  --color-warning: #ffc107; /* Warning */
+  --color-info: #17a2b8; /* Info */
+  
+  /* ⚪ Neutral Palette */
+  --color-dark: #000000; /* Absolute black */
+  --color-light: #f7f7f7; /* Light background surfaces */
+  --color-black: #1a1a1a; /* Deep neutral for typography */
+  --color-black02: #222222;
+  --color-black03: #383838;
+  --color-white: #ffffff; /* Absolute white */
+  --color-white02: #f7f7f7;
+  --color-white03: #e8e8e8;
+
+  //fonts
+  --font-mono: "Courier Prime", monospace;
+
+
+    --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold:800 ;
+
+
+
+    /*=========================================================
+        Heading Font Sizes
+    ==========================================================*/
+  /*
+    Main page titles, hero titles
+    MIN: 40px (2.5rem)
+    MAX: 80px (5rem)
+    Line-height: 84px
+  */
+  
+  --fs-h1: 54px;
+  --lh-h1: 1.05;
+
+  /*
+    Section titles, major content blocks
+    MIN: 28px (2rem)
+    MAX: 55px (3.93rem)
+    Line-height: 63px
+  */
+  --fs-h2: 40px;
+  --lh-h2: 1.15;
+
+  /*
+    Subheadings, content section labels
+    MIN: 21px (1.5rem)
+    MAX: 40px (2.85rem)
+    Line-height: 48px
+  */
+  --fs-h3: 24px;
+  --lh-h3: 1.2;
+
+
+  /*
+    Smaller headings, widget titles, card titles
+    MIN: 17.5px (1.25rem)
+    MAX: 30px (2.14rem)
+    Line-height: 37px
+  */
+  --fs-h4: 21px;
+  --lh-h4: 1.28;
+
+  /*
+    Small section headings, UI labels
+    MIN: 14px (1rem)
+    MAX: 22px (1.57rem)
+    Line-height: 29px
+  */
+  --fs-h5: 18px;
+  --lh-h5: 1.38;
+
+  /*
+   Small section headings, UI labels
+   MIN: 14px (1rem)
+   MAX: 22px (1.57rem)
+   Line-height: 29px
+ */
+  /* --fs-h6: clamp(1rem, 1.5vw + 0.25rem, 1.333rem); */
+  --fs-h6: 17px;
+  --lh-h6: 1.45;
+
+  /*=========================================================
+    paragraph font sizes
+  ==========================================================*/
+  /*
+    Paragraph text , nav mobile links
+    MIN: 14px (1rem)
+    MAX: 22px (1.48rem)
+  */
+  /*--fs-body*/
+  --fs-body: 16px;
+  --lh-body: 1.55;
+
+  /*
+    Captions, notes, meta text , nav links , btn text
+    MIN: 12px (0.85rem)
+    MAX: 16px (1.14rem)
+  */
+  /*--fs-small*/
+  --fs-small: 14px;
+  --lh-small: 1.35;
+
+  /* Line Heights (vertical rhythm) */
+  /*--line-height-body: 1.2;*/
+  --fs-somep: 16px;
+
+}

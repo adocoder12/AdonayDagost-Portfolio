@@ -43,42 +43,26 @@ export default function HomePage({ services }: { services: TServices[] }) {
       <div className="container-sized">
         {/* Editorial Introduction */}
         <section className="flex flex-col items-center justify-center text-center py-20 gap-y-10">
-          <p className="text-xl leading-relaxed md:text-3xl md:leading-snug lg:text-4xl lg:leading-tight font-light text-content max-w-5xl italic">
+          <h2 className="leading-relaxed text-black-02   md:leading-snug lg:leading-tight font-light text-content max-w-5xl italic">
             "My passion for creativity and problem-solving led me to explore
             frontend development. The moment I crafted my first webpage, I was
             <span className="text-decorator font-bold"> captivated</span> by the
             power to transform ideas into interactive digital experiences."
-          </p>
-          <Button className="mx-auto" btnHerf="about-me">
-            Explore My Journey_
-          </Button>
-        </section>
-
-        {/* Skills Section */}
-        <section className="flex flex-col py-20 gap-y-12 border-t border-white/5">
-          <div className="space-y-4">
-            <h2 className="text-2xl md:text-5xl font-black uppercase tracking-tighter text-textColor">
-              Technical Stack_
-            </h2>
-            <p className="text-sm md:text-lg opacity-60 uppercase tracking-widest font-bold">
-              Skills I've honed to excel as a developer
-            </p>
-          </div>
-          <SkillsComponentList />
+          </h2>
         </section>
 
         {/* Gallery Section */}
         <section className="flex flex-col py-20 gap-y-12 border-t border-white/5">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end">
-            <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-textColor leading-[0.85]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-black-02 leading-[0.85]">
               Mastering <br /> the Craft_
             </h2>
-            <p className="font-light text-md md:text-xl leading-relaxed text-justify opacity-80">
+            <h5 className="font-light  leading-relaxed text-justify opacity-80">
               Innovation, creativity, and passion converge in the projects I’ve
-              curated. Each piece reflects a commitment to excellence and a love
-              for problem-solving—representing a unique challenge tackled with
-              technical expertise.
-            </p>
+              worked on. Each piece reflects a commitment and love for problem
+              solving representing a unique challenge tackled with technical
+              expertise.
+            </h5>
           </div>
 
           <Suspense fallback={<Loader />}>
@@ -88,6 +72,19 @@ export default function HomePage({ services }: { services: TServices[] }) {
           <div className="flex justify-center mt-10 self-end">
             <Button btnHerf="projects">Browse All Projects</Button>
           </div>
+        </section>
+
+        {/* Skills Section */}
+        <section className="flex flex-col py-20 gap-y-12 border-t border-white/5">
+          <div className="space-y-4">
+            <h2 className=" font-black uppercase tracking-tighter text-textColor">
+              Technical Stack_
+            </h2>
+            <h3 className=" opacity-60 uppercase tracking-widest font-bold">
+              Skills I've honed to excel as a developer
+            </h3>
+          </div>
+          <SkillsComponentList />
         </section>
       </div>
     </>
