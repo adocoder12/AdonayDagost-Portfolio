@@ -131,7 +131,7 @@ export const services = [
       alt: "poofApp",
     },
     title: "poofApp",
-    subtitle: "Social Media Sticky Notes App",
+    subtitle: "Social Media Sticky Notes App!",
     description:
       "poofApp is a unique social media platform centered around digital sticky notes, developed using React Native for a seamless mobile experience. Powered by a high-performance Golang backend and managed with Zustand for efficient state handling, the app allows users to post, share, and interact with notes in a real-time environment. This project demonstrates my ability to integrate modern mobile frameworks with robust backend systems to create engaging, performance-oriented social experiences.",
     thumbnails: [
