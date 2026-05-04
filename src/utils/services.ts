@@ -1,7 +1,7 @@
 import WAPPImages from "../assets/img/WAPP";
 import MinaTeenImages from "../assets/img/minaTeen";
 import ChatReactImages from "../assets/img/ChatReact";
-// import RecrioImages from "../assets/img/Recrio"; // Uncomment if needed
+import PoofAppImages from "../assets/img/PoofAapp";
 
 export const services = [
   {
@@ -124,32 +124,37 @@ export const services = [
       },
     ],
   },
-  // {
-  //   id: 4,
-  //   thumbnail: {
-  //     src: RecrioImages.image1,
-  //     alt: "Recrio Web Page",
-  //   },
-  //   title: "Recrio",
-  //   subtitle: "Worker recruitment company",
-  //   description:
-  //     "The Recrio web application is designed for a recruitment company specializing in connecting recent graduates with job opportunities. The site includes features for job postings, application tracking, and user profiles. It offers a clean and intuitive user interface that facilitates easy navigation and efficient job searching. This project demonstrates my ability to create user-centric applications that meet specific business needs and enhance user experience.",
-  //   thumbnails: [
-  //     {
-  //       id: 1,
-  //       src: RecrioImages.image1,
-  //       alt: "Recrio Web Page Image 1",
-  //     },
-  //     {
-  //       id: 2,
-  //       src: RecrioImages.image1,
-  //       alt: "Recrio Web Page Image 2",
-  //     },
-  //     {
-  //       id: 3,
-  //       src: RecrioImages.image1,
-  //       alt: "Recrio Web Page Image 3",
-  //     },
-  //   ],
-  // },
+  {
+    id: 4,
+    thumbnail: {
+      src: "", // Add a default thumbnail source here
+      alt: "poofApp",
+    },
+    title: "poofApp",
+    subtitle: "Social Media Sticky Notes App",
+    description:
+      "poofApp is a unique social media platform centered around digital sticky notes, developed using React Native for a seamless mobile experience. Powered by a high-performance Golang backend and managed with Zustand for efficient state handling, the app allows users to post, share, and interact with notes in a real-time environment. This project demonstrates my ability to integrate modern mobile frameworks with robust backend systems to create engaging, performance-oriented social experiences.",
+    thumbnails: [
+      {
+        id: 1,
+        src: PoofAppImages.homePage,
+        alt: "poofApp Home Page",
+      },
+      {
+        id: 2,
+        src: PoofAppImages.archivesPage,
+        alt: "poofApp Archives Page",
+      },
+      {
+        id: 3,
+        src: PoofAppImages.notificationsPage,
+        alt: "poofApp Notifications Page",
+      },
+      {
+        id: 5,
+        src: PoofAppImages.ProfilePage,
+        alt: "poofApp Profile Page",
+      },
+    ],
+  },
 ];
