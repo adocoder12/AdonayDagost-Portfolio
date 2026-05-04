@@ -127,7 +127,7 @@ export const services = [
   {
     id: 4,
     thumbnail: {
-      src: "", // Add a default thumbnail source here
+      src: PoofAppImages.homePage, // Add a default thumbnail source here
       alt: "poofApp",
     },
     title: "poofApp",
