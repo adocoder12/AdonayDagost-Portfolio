@@ -1,7 +1,7 @@
-import WAPPImages from "../assets/img/WAPP";
-import MinaTeenImages from "../assets/img/minaTeen";
-import ChatReactImages from "../assets/img/ChatReact";
-import PoofAppImages from "../assets/img/PoofAapp";
+import WAPPImages from "@/assets/img/WAPP";
+import MinaTeenImages from "@/assets/img/minaTeen";
+import ChatReactImages from "@/assets/img/ChatReact";
+import PoofAppImages from "@/assets/img/PoofAapp";
 
 export const services = [
   {
