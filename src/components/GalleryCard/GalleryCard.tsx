@@ -18,11 +18,11 @@ export default function GalleryCard({ service, className }: GalleryCardProps) {
     <div
       onClick={handleOnClick}
       className={cn(
-        "group flex flex-col w-full cursor-pointer transition-all duration-300 hover:-translate-y-2",
+        "group flex flex-col w-full h-[550px] aspect-square cursor-pointer transition-all duration-300 hover:-translate-y-2",
         className,
       )}
     >
-      <div className="w-full max-h-[450px] overflow-hidden bg-white/5 rounded-[5px] border border-white/5 flex items-center justify-center">
+      <div className="w-full h-full overflow-hidden bg-white/5 rounded-[5px] border border-white/5 flex items-center justify-center">
         <img
           alt={service.thumbnail.alt}
           src={service.thumbnail.src}

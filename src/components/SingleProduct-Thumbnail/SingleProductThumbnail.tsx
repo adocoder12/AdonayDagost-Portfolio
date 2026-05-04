@@ -12,7 +12,7 @@ export default function SingleProductThumbnail({
         src={thumbnail.src}
         alt={thumbnail.alt}
         /* Changed h-full to h-auto and removed aspect-video to show full image */
-        className="w-full h-auto block object-contain "
+        className="w-full h-180 block object-contain "
         loading="eager"
       />
     </div>

@@ -63,7 +63,7 @@ export default function SingleProduct({
       <div className="mt-20 pt-10 border-t border-white/10">
         <button
           onClick={() => window.history.back()}
-          className="group flex items-center gap-3 text-xs font-black uppercase tracking-[0.3em] hover:text-decorator transition-colors"
+          className="group flex items-center gap-3 text-xs font-black uppercase tracking-[0.3em] hover:text-decorator transition-colors hover:cursor-pointer"
         >
           <span className="group-hover:-translate-x-2 transition-transform duration-300">
             ←
