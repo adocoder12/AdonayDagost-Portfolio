@@ -7,8 +7,8 @@ export const services = [
   {
     id: 1,
     thumbnail: {
-      src: WAPPImages.TeamsPage,
-      alt: "Tournament App",
+      src: "",
+      alt: "",
     },
     title: "Tournament App",
     subtitle: "FullStack App made with Typescript",
@@ -60,7 +60,7 @@ export const services = [
   {
     id: 2,
     thumbnail: {
-      src: MinaTeenImages.homePageDesktop,
+      src: "",
       alt: "MinaTeenTmi Web Page",
     },
     title: "MinaTeenTmi",
@@ -99,7 +99,7 @@ export const services = [
   {
     id: 3,
     thumbnail: {
-      src: ChatReactImages.Chat_page,
+      src: "",
       alt: "Web app chat",
     },
     title: "Web app chat",

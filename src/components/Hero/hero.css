@@ -29,8 +29,8 @@
     inset: 0;
     z-index: 2;
     /* 1. Backdrop blur creates the frosted effect */
-    backdrop-filter: blur(15px) saturate(160%);
-    -webkit-backdrop-filter: blur(15px) saturate(160%);
+    backdrop-filter: blur(10px) saturate(160%);
+    -webkit-backdrop-filter: blur(10px) saturate(160%);
 
     /* 2. Light "sheen" - uses a soft white tint instead of dark colors */
     background: linear-gradient(

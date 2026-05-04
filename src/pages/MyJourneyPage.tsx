@@ -26,41 +26,96 @@ export default function MyJourneyPage() {
         <title>Adonay D'agosto | {currentPage}</title>
         <meta
           name="description"
-          content="Explore the professional journey of Adonay D'agosto, a frontend developer specializing in React, TypeScript, and interactive web experiences."
+          content="Explore the professional journey of Adonay D'agosto, a Full Stack developer specializing in Go, React, and high-performance web applications."
         />
       </Helmet>
 
-      {/* Reusable header for internal pages */}
+      {/* Updated header to reflect software developer identity */}
       <PagesHeader
         secondaryTitle="Hi, I’m Adonay D'agosto"
         description="A software developer who loves to code, skate and play guitar."
       />
       <div className="container-sized">
-        <div className="flex flex-col gap-y-8 py-6 md:py-10 text-content mb-12 lg:mb-32">
+        <div className="flex flex-col gap-y-8 py-6 md:py-10 text-content mb-8 ">
           <p className="text-base leading-loose md:text-lg md:leading-loose lg:text-xl lg:leading-loose font-light text-justify md:text-left">
-            I’m a frontend developer with a deep passion for creativity and
-            problem-solving. From the moment I built my first webpage, I was
-            hooked by how design and functionality bring ideas to life. Using
-            HTML, CSS, JavaScript, React, Tailwind, and TypeScript, I focus on
-            creating interactive, user-friendly experiences.
+            I’m a software developer who lives for the "aha!" moment that point
+            where complex logic finally clicks into a clean, efficient solution.
+            Whether I’m architecting a Go backend or perfecting a trick on my
+            skateboard, I’m driven by the same thing: the challenge of building
+            something great from the ground up.
           </p>
 
           <p className="text-base leading-loose md:text-lg md:leading-loose lg:text-xl lg:leading-loose font-light text-justify md:text-left">
-            As I explored more, I dove into advanced tools like React, Tailwind,
-            and Django, unlocking new ways to build dynamic, scalable web apps.
-            I love the challenge of designing responsive interfaces that work
-            smoothly across devices, and seeing my projects come to life is the
-            most rewarding part of what I do.
+            My journey started in the frontend with React, TypeScript, and
+            Tailwind, where I fell in love with how design and functionality
+            bring ideas to life. As my curiosity grew, I moved deeper into the
+            stack to expand my impact beyond the browser. Today, I build
+            end-to-end applications, from designing high-performance REST APIs
+            in Golang to crafting professional custom WordPress themes with Sage
+            (Roots).
           </p>
 
           <p className="text-base leading-loose md:text-lg md:leading-loose lg:text-xl lg:leading-loose font-light text-justify md:text-left">
-            When I’m not coding, I like to keep things fun and active. You’ll
-            often find me skating, where I enjoy the freedom of cruising around
-            and perfecting tricks. I also love playing guitar, letting
-            creativity flow through music. And when it’s time to unwind, there’s
-            nothing better than a game of football with friends to stay sharp
-            and energized.
+            I believe in writing code that isn't just functional, but clean and
+            maintainable for the whole team. When I’m not at my desk, you’ll
+            often find me skating, mastering a new riff on the guitar, or
+            playing a game of football with friends. Staying active keeps my
+            mind sharp and energized for the next coding challenge.
           </p>
+        </div>
+      </div>
+      <div className="container-sized pb-20">
+        <h3 className="text-2xl font-semibold mb-8 border-b pb-2">
+          Technical Milestones
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Milestone 1: The Foundation */}
+          <div>
+            <h4 className="font-bold text-lg">
+              Full-Stack Development Specialist
+            </h4>
+            <p className="text-sm opacity-80">Udemy / 2025</p>
+            <ul className="mt-2 list-disc list-inside text-sm font-light leading-relaxed">
+              <li>Deep dive into Laravel 12 & PHP backend architecture.</li>
+              <li>Integration of Inertia.js with React for seamless SPAs.</li>
+            </ul>
+          </div>
+
+          {/* Milestone 2: Professional Degree */}
+          <div>
+            <h4 className="font-bold text-lg">Web Development Degree</h4>
+            <p className="text-sm opacity-80">Omnia / 2023-2024</p>
+            <ul className="mt-2 list-disc list-inside text-sm font-light leading-relaxed">
+              <li>Specialization in PHP, SQL, and Python frameworks.</li>
+              <li>Advanced Frontend studies in TypeScript and React.</li>
+            </ul>
+          </div>
+
+          {/* Milestone 3: Current Focus */}
+          <div>
+            <h4 className="font-bold text-lg">Go & High-Performance Systems</h4>
+            <p className="text-sm opacity-80">
+              Independent Study & Projects / 2026
+            </p>
+            <ul className="mt-2 list-disc list-inside text-sm font-light leading-relaxed">
+              <li>Building type-safe REST APIs with Golang.</li>
+              <li>
+                Custom session management and auth middleware implementation.
+              </li>
+            </ul>
+          </div>
+
+          {/* Milestone 4: Early Background */}
+          <div>
+            <h4 className="font-bold text-lg">Datanomi Qualification</h4>
+            <p className="text-sm opacity-80">
+              Savon Ammattiopisto / 2019-2022
+            </p>
+            <p className="mt-2 text-sm font-light leading-relaxed">
+              The start of my IT journey, focusing on software design and the
+              fundamentals of object-oriented programming.
+            </p>
+          </div>
         </div>
       </div>
     </>
