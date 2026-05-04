@@ -18,7 +18,7 @@ export default function GalleryCard({ service, className }: GalleryCardProps) {
     <div
       onClick={handleOnClick}
       className={cn(
-        "group flex flex-col w-full h-[550px] aspect-square cursor-pointer transition-all duration-300 hover:-translate-y-2",
+        "group flex flex-col w-full h-[600px] aspect-square cursor-pointer transition-all duration-300 hover:-translate-y-2",
         className,
       )}
     >
@@ -30,7 +30,7 @@ export default function GalleryCard({ service, className }: GalleryCardProps) {
              Using h-auto ensures the image stays in proportion.
              Removed all scale and rotate hover classes.
           */
-          className="w-full h-auto object-contain block"
+          className="w-full h-auto object-contain block object-top"
         />
       </div>
 
