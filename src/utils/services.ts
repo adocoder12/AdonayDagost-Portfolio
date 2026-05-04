@@ -1,7 +1,7 @@
 import WAPPImages from "@/assets/img/WAPP";
 import MinaTeenImages from "@/assets/img/minaTeen";
 import ChatReactImages from "@/assets/img/ChatReact";
-import PoofAppImages from "@/assets/img/PoofAapp";
+import poofAapp from "@/assets/img/poofAapp";
 
 export const services = [
   {
@@ -127,7 +127,7 @@ export const services = [
   {
     id: 4,
     thumbnail: {
-      src: PoofAppImages.homePage, // Add a default thumbnail source here
+      src: poofAapp.homePage, // Add a default thumbnail source here
       alt: "poofApp",
     },
     title: "poofApp",
@@ -137,22 +137,22 @@ export const services = [
     thumbnails: [
       {
         id: 1,
-        src: PoofAppImages.homePage,
+        src: poofAapp.homePage,
         alt: "poofApp Home Page",
       },
       {
         id: 2,
-        src: PoofAppImages.archivesPage,
+        src: poofAapp.archivesPage,
         alt: "poofApp Archives Page",
       },
       {
         id: 3,
-        src: PoofAppImages.notificationsPage,
+        src: poofAapp.notificationsPage,
         alt: "poofApp Notifications Page",
       },
       {
         id: 5,
-        src: PoofAppImages.ProfilePage,
+        src: poofAapp.ProfilePage,
         alt: "poofApp Profile Page",
       },
     ],
