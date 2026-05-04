@@ -36,7 +36,7 @@ export default function MyJourneyPage() {
         description="A software developer who loves to code, skate and play guitar."
       />
       <div className="container-sized">
-        <div className="flex flex-col gap-y-8 py-6 md:py-10 text-content mb-8 ">
+        <div className="flex flex-col gap-y-8 py-6 text-content mb-8 ">
           <p className="text-base leading-loose md:text-lg md:leading-loose lg:text-xl lg:leading-loose font-light text-justify md:text-left">
             I’m a software developer who lives for the "aha!" moment that point
             where complex logic finally clicks into a clean, efficient solution.

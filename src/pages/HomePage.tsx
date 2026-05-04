@@ -17,7 +17,7 @@ const GallerySection = lazy(
 import { TServices } from "@/utils/types/types";
 import { capitalizeFirstLetter } from "@/utils/functions";
 
-const btnLinks = [{ text: "View Archive", href: "projects" }];
+const btnLinks = [{ text: "View Projects", href: "projects" }];
 
 export default function HomePage({ services }: { services: TServices[] }) {
   const { pathname } = useLocation();

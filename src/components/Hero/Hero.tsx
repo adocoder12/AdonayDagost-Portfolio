@@ -8,42 +8,45 @@ import "./hero.css";
 export default function Hero({ links, className }: THero) {
   return (
     <section className={cn("hero-section-block", className)}>
+      {/* The frosted glass layer */}
       <div className="mask" />
 
+      {/* The background image that gets blurred */}
       <img
         src={profilePic}
-        alt="Background Visual"
-        className={"background-visual"}
+        alt="Adonay D'Agosto - Developer Profile"
+        className="background-visual"
       />
 
       <div className="content-hero">
         <div className="text-hero-container">
-          <h2 className="text-md font-medium tracking-wider uppercase">
+          <h2 className="font-medium tracking-[0.2em] uppercase opacity-90">
             Hi ✋🏾, here is Ado.
           </h2>
 
-          <h1 className="uppercase font-bold text-black-02 leading-tight">
+          <h1 className="uppercase font-bold leading-tight">
             A Software Developer.
           </h1>
 
-          <h5 className=" font-light text-black-02 leading-relaxed max-w-2xl">
+          <p className="font-light leading-relaxed max-w-2xl opacity-80">
             Building high-performance, interactive digital experiences with a
             focus on clean code and creative design.
-          </h5>
+          </p>
 
           <div className="hero-btn-wrapper">
             {links &&
               links.length > 0 &&
               links.map((link, idx) => (
-                <Button key={idx} btnHerf={link.href}>
+                <Button key={idx} btnHerf={link.href} className="text-white-02">
                   {link.text}
                 </Button>
               ))}
           </div>
         </div>
 
+        {/* Brand Initials Overlay */}
         <div className="absolute hidden xl:block bottom-16 right-12 pointer-events-none select-none">
-          <span className="text-[10rem] font-black opacity-20 text-black-02">
+          <span className="text-[10rem] font-black opacity-10 text-white">
             A.D
           </span>
         </div>
