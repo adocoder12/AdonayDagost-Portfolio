@@ -7,5 +7,5 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
   },
-  base: '/AdonayDagosto_Portfolio/',
+  base: "/AdonayDagost-Portfolio/",
 });
