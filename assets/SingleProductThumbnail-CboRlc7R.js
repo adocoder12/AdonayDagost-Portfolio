@@ -1,1 +1,0 @@
-import{n as e,t}from"./cn-BR-eHLHD.js";var n=e();function r({thumbnail:e}){return(0,n.jsx)(`div`,{className:t(`relative w-full overflow-hidden bg-transparent`),children:(0,n.jsx)(`img`,{src:e.src,alt:e.alt,className:`w-full h-180 block object-contain `,loading:`eager`})})}export{r as default};

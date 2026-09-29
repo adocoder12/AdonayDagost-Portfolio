@@ -1,0 +1,1 @@
+import{j as e}from"./index-DDZdfGwF.js";const s=()=>e.jsxs("div",{className:"w-full gap-x-2 flex justify-center items-center",children:[e.jsx("div",{className:"w-5 bg-decorator h-5 rounded-full animate-bounce"}),e.jsx("div",{className:"w-5  h-5 bg-mainColor rounded-full animate-bounce"}),e.jsx("div",{className:"w-5 h-5  bg-content rounded-full animate-bounce"})]});export{s as L};
