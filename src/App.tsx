@@ -1,4 +1,3 @@
-import { BrowserRouter } from "react-router-dom";
 // import { lazy } from "react";
 
 // Components
@@ -18,7 +17,7 @@ import ScrollToTop from "@utils/hooks/ScrollToTop";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
 
       <div className="app">
@@ -32,7 +31,7 @@ function App() {
         {/* Footer is now a direct child of .app and will span 100% */}
         <Footer />
       </div>
-    </BrowserRouter>
+    </>
   );
 }
 
