@@ -25,17 +25,17 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 h-[70px] right-0 z-[60000] w-full transition-all duration-500 ease-in-out",
+        "fixed top-0 left-0 h-17.5 right-0 z-60000 w-full transition-all duration-500 ease-in-out",
         isScrolled
           ? "bg-background/85 backdrop-blur-md shadow-lg py-4"
           : "bg-background py-6",
       )}
     >
-      <div className="max-w-[1512px] mx-auto w-full flex items-center justify-between px-[20px] lg:px-[52px]">
+      <div className="max-w-378 mx-auto w-full flex items-center justify-between px-5 lg:px-13">
         <div className="flex items-center">
           <Link
             to="/"
-            className="text-2xl font-bold uppercase tracking-tight text-colorText z-[99999]"
+            className="text-2xl font-bold uppercase tracking-tight text-colorText z-99999"
           >
             Adonay D'Agosto
           </Link>
@@ -55,7 +55,7 @@ export default function Header() {
           ))}
         </Navbar>
 
-        <div className="flex lg:hidden items-center relative z-[99999]">
+        <div className="flex lg:hidden items-center relative z-99999">
           <button
             onClick={() => setToggleMenu(!toggleMenu)}
             className={cn(
@@ -65,9 +65,9 @@ export default function Header() {
             aria-label="Toggle Menu"
           >
             {!toggleMenu ? (
-              <BurgerIcon className="w-[30px] h-[30px] text-textColor [" />
+              <BurgerIcon className="w-7.5 h-7.5 text-textColor" />
             ) : (
-              <CloseIcon className="w-[30px] h-[30px] text-textColor " />
+              <CloseIcon className="w-7.5 h-7.5 text-textColor" />
             )}
           </button>
         </div>
