@@ -1,1 +1,0 @@
-import{j as e,c as l}from"./index-BrHGXRYK.js";function s({thumbnail:a}){return e.jsx("div",{className:l("relative w-full overflow-hidden bg-transparent"),children:e.jsx("img",{src:a.src,alt:a.alt,className:"w-full h-180 block object-contain ",loading:"eager"})})}export{s as default};
