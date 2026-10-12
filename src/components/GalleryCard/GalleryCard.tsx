@@ -17,7 +17,7 @@ export default function GalleryCard({ service, className }: GalleryCardProps) {
     <div
       onClick={() => navigate(`/projects/${service.id}`)}
       className={cn(
-        "group flex flex-col w-full h-full cursor-pointer transition-all duration-300 hover:-translate-y-2",
+        "group flex flex-col w-full h-full min-w-0 cursor-pointer transition-all duration-300 hover:-translate-y-2",
         className,
       )}
     >
@@ -31,22 +31,28 @@ export default function GalleryCard({ service, className }: GalleryCardProps) {
         ) : (
           /* Fallback UI: Shows the title if no image is present */
           <div className="flex items-center justify-center p-6 text-center bg-black-01 w-full h-full">
-            <h2 className="font-black uppercase text-black-02 tracking-tighter  opacity-60 group-hover:opacity-100 transition-opacity">
+            <h2 className="font-black uppercase text-White-02 tracking-tighter opacity-60 group-hover:opacity-100 transition-opacity break-words line-clamp-4">
               {service.title}_
             </h2>
           </div>
         )}
       </div>
 
-      <div className="flex flex-col flex-grow pt-6 px-1">
-        <div className="text-start flex-grow">
-          <h3 className="font-black uppercase text-black-02 tracking-tighter text-lg md:text-content leading-tight mb-1">
+      <div className="flex flex-col flex-grow min-w-0 pt-6 px-1">
+        <div className="text-start flex-grow min-w-0">
+          <h3
+            title={service.title}
+            className="font-black uppercase text-White-02 tracking-tighter text-lg md:text-content leading-tight mb-2 break-words line-clamp-2"
+          >
             {service.title}_
           </h3>
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-decorator mb-4">
+          <p
+            title={service.subtitle}
+            className="text-[10px] font-bold uppercase tracking-[0.3em] text-decorator mb-4 truncate"
+          >
             {service.subtitle}
           </p>
-          <p className="text-sm md:text-base text-black-03 font-light leading-relaxed line-clamp-3 opacity-70">
+          <p className="text-sm md:text-base text-text font-light leading-relaxed line-clamp-3 min-h-[4.875em] break-words opacity-70">
             {service.description}
           </p>
         </div>

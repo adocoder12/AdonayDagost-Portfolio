@@ -12,7 +12,7 @@ export default function SingleProductThumbnails({
 }) {
   return (
     <div className="flex flex-col gap-4">
-      <h5 className="font-black tracking-[0.4em] uppercase text-black-03">
+      <h5 className="font-black tracking-[0.4em] uppercase text-White-02">
         Gallery Selection_
       </h5>
 

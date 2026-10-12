@@ -42,17 +42,17 @@ export default function Footer() {
         <div className="flex flex-col items-start justify-between gap-12 md:flex-row">
           {/* Branding Section */}
           <div className="flex flex-col gap-4">
-            <h3 className=" text-black-02 font-bold uppercase tracking-tighter ">
+            <h3 className=" text-text font-bold uppercase tracking-tighter ">
               Adonay D'agosto
             </h3>
-            <p className=" text-small  max-w-[250px] text-black-02/60  leading-relaxed italic">
+            <p className=" text-small  max-w-[250px] text-text  leading-relaxed italic">
               “Talk is cheap. Show me the code.” <br /> — Linus Torvalds
             </p>
           </div>
 
           {/* Navigation Section */}
           <div className="flex flex-col gap-4">
-            <h6 className="font-bold uppercase tracking-widest text-black">
+            <h6 className="font-bold uppercase tracking-widest text-text">
               Navigation
             </h6>
             <ul className="flex flex-col gap-y-2">
@@ -67,7 +67,7 @@ export default function Footer() {
 
           {/* Contact Section */}
           <div className="flex flex-col gap-4">
-            <h6 className="font-bold uppercase tracking-widest text-black">
+            <h6 className="font-bold uppercase tracking-widest text-text">
               Contact
             </h6>
             <ul className="flex flex-col gap-y-4">
@@ -102,7 +102,7 @@ export default function Footer() {
         <hr className="my-10 border-white/10" />
 
         <div className="flex flex-col items-center gap-y-6 md:flex-row justify-between">
-          <p className="text-small text-black/50 order-2 md:order-1">
+          <p className="text-small text-text/50 order-2 md:order-1">
             &copy; 2026 Kinuski Inc. All rights reserved.
           </p>
 
@@ -114,7 +114,7 @@ export default function Footer() {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black-02/80 hover:scale-110 transition-all duration-300"
+                className="text-text/80 hover:scale-110 transition-all duration-300"
                 style={{ "--hover-color": mediaColor } as React.CSSProperties}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.color =

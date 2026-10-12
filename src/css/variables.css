@@ -1,8 +1,8 @@
 :root {
-  --background: #e8edf2;
-  --text: #111111;
+  --background: #232925;
+  --text: #f2f5f3;
   --color-muted: #a0a0a0; /* Placeholders, sad, inactive states */
-  --decorator: #997a66;
+  --decorator: #0fbf3e;
 
   /* ⚙️ Functional Colors */
   --color-success: #28a745; /* Success */

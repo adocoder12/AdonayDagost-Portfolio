@@ -5,22 +5,29 @@ import profilePic from "@/assets/img/profile.jpeg";
 
 import "./hero.css";
 
+// Set to true to bring back the blurred background image
+const SHOW_BACKGROUND = false;
+
 export default function Hero({ links, className }: THero) {
   return (
     <section className={cn("hero-section-block", className)}>
-      {/* The frosted glass layer */}
-      <div className="mask" />
+      {SHOW_BACKGROUND && (
+        <>
+          {/* The frosted glass layer */}
+          <div className="mask" />
 
-      {/* The background image that gets blurred */}
-      <img
-        src={profilePic}
-        alt="Adonay D'Agosto - Developer Profile"
-        className="background-visual"
-      />
+          {/* The background image that gets blurred */}
+          <img
+            src={profilePic}
+            alt="Adonay D'Agosto - Developer Profile"
+            className="background-visual"
+          />
+        </>
+      )}
 
       <div className="content-hero">
         <div className="text-hero-container">
-          <h2 className="font-medium tracking-[0.2em] uppercase opacity-90">
+          <h2 className="font-medium tracking-[0.2em] uppercase text-decorator">
             Hi ✋🏾, here is Ado.
           </h2>
 
@@ -28,7 +35,7 @@ export default function Hero({ links, className }: THero) {
             A Software Developer.
           </h1>
 
-          <p className="font-light leading-relaxed max-w-2xl opacity-80">
+          <p className="font-light leading-relaxed max-w-2xl text-justify text-text/80">
             Building high-performance, interactive digital experiences with a
             focus on clean code and creative design.
           </p>
@@ -37,7 +44,11 @@ export default function Hero({ links, className }: THero) {
             {links &&
               links.length > 0 &&
               links.map((link, idx) => (
-                <Button key={idx} btnHerf={link.href} className="text-white-02">
+                <Button
+                  key={idx}
+                  btnHerf={link.href}
+                  className="text-decorator"
+                >
                   {link.text}
                 </Button>
               ))}
@@ -46,7 +57,7 @@ export default function Hero({ links, className }: THero) {
 
         {/* Brand Initials Overlay */}
         <div className="absolute hidden xl:block bottom-16 right-12 pointer-events-none select-none">
-          <span className="text-[10rem] font-black opacity-10 text-white">
+          <span className="text-[10rem] font-black opacity-10 text-text">
             A.D
           </span>
         </div>

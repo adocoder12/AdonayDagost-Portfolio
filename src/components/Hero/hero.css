@@ -102,7 +102,7 @@
     h1 {
       word-break: break-word;
       text-wrap: pretty;
-      color: var(--color-black, #000000);
+      color: var(--color-white-02, #000000);
       font-size: clamp(2.5rem, 6vw + 1rem, 6.5rem);
       line-height: var(--lh-h1);
       font-weight: var(--font-weight-bold);
@@ -113,7 +113,7 @@
 
     h2 {
       /* Keeping h2 white as a brand accent, or set to black if preferred */
-      color: var(--color-black, #000000);
+      color: var(--color-text, #000000);
       opacity: 0.9;
       font-size: clamp(1.25rem, 3vw + 0.5rem, 1.75rem);
       letter-spacing: 0.1em;
@@ -121,7 +121,7 @@
     }
 
     p {
-      color: var(--color-black, #000000);
+      color: var(--color-text, #000000);
       opacity: 0.85;
       max-width: 600px;
       font-size: 1.1rem;
