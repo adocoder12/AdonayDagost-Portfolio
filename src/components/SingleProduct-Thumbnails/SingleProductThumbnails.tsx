@@ -11,7 +11,7 @@ export default function SingleProductThumbnails({
   onSelectThumbnail: (t: Thumbnail) => void;
 }) {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-6">
       <h5 className="font-black tracking-[0.4em] uppercase text-White-02">
         Gallery Selection_
       </h5>

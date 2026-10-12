@@ -26,4 +26,6 @@ export type TServices = {
   description: string;
   thumbnail: Thumbnail;
   thumbnails: Thumbnail[];
+  repo?: string;
+  live?: string;
 };

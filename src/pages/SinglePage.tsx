@@ -41,6 +41,8 @@ export default function SinglePage() {
           thumbnail={service.thumbnail}
           thumbnails={service.thumbnails}
           description={service.description}
+          repo={service.repo}
+          live={service.live}
         />
       </div>
     </>
