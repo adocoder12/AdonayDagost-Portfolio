@@ -22,11 +22,12 @@ export const services = [
       src: "",
       alt: "Go web app",
     },
-    title: "Go Web App",
-    subtitle: "Server-rendered app with Go's standard library",
+    title: "Backend web app with Go's net/http",
+    subtitle: "Backend web app built with Go's net/http",
     description:
       "A server-rendered web app built with Go's net/http and no framework, to learn how the web layer works underneath. Users register and log in with bcrypt-hashed passwords; sessions are stored in SQLite with session-fixation protection and flash messages. Requests pass through a middleware chain for logging, panic recovery and auth guards, and pages render through a cached, thread-safe template renderer. Data access uses a repository pattern with a DBTX interface so queries work inside transactions.",
     thumbnails: [],
+    repo: "https://github.com/adocoder12/moviesBackend_golang",
   },
   {
     id: 1,
